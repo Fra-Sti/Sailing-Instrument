@@ -1,0 +1,25 @@
+<strings>
+    <string id="AppName">Ultrasonic</string>
+    <string id="label">My Value</string>
+
+    <string id="ultrasonic_label_TWS">TWS</string>
+    <string id="ultrasonic_graph_label_TWS">TWS</string>
+    <string id="ultrasonic_units_TWS">m/s</string>
+    
+    <string id="ultrasonic_label_TWA">TWA</string>
+    <string id="ultrasonic_graph_label_TWA">TWA</string>
+    <string id="ultrasonic_units_TWA">Degree</string>
+    
+    <string id="ultrasonic_label_AWS">AWS</string>
+    <string id="ultrasonic_graph_label_AWS">AWS</string>
+    <string id="ultrasonic_units_AWS">m/s</string>
+    
+    <string id="ultrasonic_label_AWA">AWD</string>
+    <string id="ultrasonic_graph_label_AWA">AWA</string>
+    <string id="ultrasonic_units_AWA">Degree</string>
+    
+    <string id="WindRose">Wind rose shows AWD</string>
+    <string id="WindSpeed">Wind speed shows AWS</string>
+    <string id="WindUnit">Wind speed in m/s</string>
+    <string id="Hz">4Hz update rate, if supported</string>
+</strings>

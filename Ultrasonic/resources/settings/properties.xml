@@ -1,0 +1,6 @@
+<properties>
+<property id="WindRose" type="boolean">false</property>
+<property id="WindSpeed" type="boolean">false</property>
+<property id="WindUnit" type="boolean">false</property>
+<property id="Hz" type="boolean">false</property>
+</properties> 

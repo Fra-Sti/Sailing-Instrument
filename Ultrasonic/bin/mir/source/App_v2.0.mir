@@ -1,0 +1,165 @@
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 1; ]
+using Toybox.Application;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 2; ]
+using Toybox.System;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 3; ]
+using Toybox.Timer;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 5; ]
+class UltrasonicApp extends Application.AppBase{
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 7; @position = 15; ]
+    protected
+    var _controller;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 8; @position = 15; ]
+    protected
+    var _model;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 10; ]
+    function initialize() as Void {
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_10_26_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 11 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_10_26_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 14; ]
+    function onStart(state) {
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_14_28_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 17 8 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_17_8_if_stmt:
+        %tmp.1 = lgetv %self;
+        %tmp.2 = getv %tmp.1 :Properties;
+        %tmp.3 = getv function %tmp.2 :getValue;
+        %tmp.4 = "Hz";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        %tmp.6 = null;
+        %tmp.7 = eq %tmp.5 %tmp.6;
+        bf %tmp.7 @C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_17_8_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_17_8_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_17_52_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 18 9 ]
+        %tmp.8 = lgetv %self;
+        %tmp.9 = getv %tmp.8 :Properties;
+        %tmp.10 = getv function %tmp.9 :setProperty;
+        %tmp.11 = "WindRose";
+        %tmp.12 = false;
+        invoke %tmp.9 %tmp.10(%tmp.11, %tmp.12);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 19 12 ]
+        %tmp.13 = lgetv %self;
+        %tmp.14 = getv %tmp.13 :Properties;
+        %tmp.15 = getv function %tmp.14 :setProperty;
+        %tmp.16 = "WindSpeed";
+        %tmp.17 = false;
+        invoke %tmp.14 %tmp.15(%tmp.16, %tmp.17);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 20 12 ]
+        %tmp.18 = lgetv %self;
+        %tmp.19 = getv %tmp.18 :Properties;
+        %tmp.20 = getv function %tmp.19 :setProperty;
+        %tmp.21 = "WindUnit";
+        %tmp.22 = false;
+        invoke %tmp.19 %tmp.20(%tmp.21, %tmp.22);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 21 12 ]
+        %tmp.23 = lgetv %self;
+        %tmp.24 = getv %tmp.23 :Properties;
+        %tmp.25 = getv function %tmp.24 :setProperty;
+        %tmp.26 = "Hz";
+        %tmp.27 = false;
+        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27);
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_17_52_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_17_8_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_17_8_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 25 8 ]
+        %tmp.31 = getv ? :CalypsoModel;
+        %tmp.28 = newc %tmp.31 ();
+        putv self :_model %tmp.28;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 27 8 ]
+        %tmp.33 = getv ? :_model;
+        %tmp.34 = getv function %tmp.33 :enableOptSensors;
+        %tmp.35 = true;
+        invoke %tmp.33 %tmp.34(%tmp.35);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 28 8 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_28_8_if_stmt:
+        %tmp.36 = lgetv %self;
+        %tmp.37 = getv %tmp.36 :Properties;
+        %tmp.38 = getv function %tmp.37 :getValue;
+        %tmp.39 = "Hz";
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        %tmp.41 = true;
+        %tmp.42 = eq %tmp.40 %tmp.41;
+        bf %tmp.42 @C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_28_8_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_28_8_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_28_52_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 28 53 ]
+        %tmp.44 = getv ? :_model;
+        %tmp.45 = getv function %tmp.44 :setDataRate;
+        %tmp.46 = 4;
+        invoke %tmp.44 %tmp.45(%tmp.46);
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_28_52_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_28_8_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_28_8_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_29_13_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 29 14 ]
+        %tmp.48 = getv ? :_model;
+        %tmp.49 = getv function %tmp.48 :setDataRate;
+        %tmp.50 = 1;
+        invoke %tmp.48 %tmp.49(%tmp.50);
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_29_13_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_28_8_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 31 8 ]
+        %tmp.52 = getv ? :_model;
+        %tmp.53 = getv function %tmp.52 :onStart;
+        invoke %tmp.52 %tmp.53();
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 34 8 ]
+        %tmp.57 = getv ? :UltrasonicController;
+        %tmp.59 = getv ? :_model;
+        %tmp.61 = lgetv %self;
+        %tmp.54 = newc %tmp.57 (%tmp.59, %tmp.61);
+        putv self :_controller %tmp.54;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 35 8 ]
+        %tmp.63 = getv ? :_controller;
+        %tmp.64 = getv function %tmp.63 :onStart;
+        invoke %tmp.63 %tmp.64();
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_14_28_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 38; ]
+    function onPosition(pos) {
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 42; ]
+    function onStop(state) {
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_42_27_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 43 8 ]
+        %tmp.2 = getv ? :_controller;
+        %tmp.3 = getv function %tmp.2 :onStop;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 44 8 ]
+        %tmp.4 = null;
+        putv self :_controller %tmp.4;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 46 8 ]
+        %tmp.6 = getv ? :_model;
+        %tmp.7 = getv function %tmp.6 :onStop;
+        invoke %tmp.6 %tmp.7();
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 47 8 ]
+        %tmp.8 = null;
+        putv self :_model %tmp.8;
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_42_27_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 50; ]
+    function getInitialView() {
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_50_30_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc" 51 7 ]
+        %tmp.2 = getv ? :_controller;
+        %tmp.3 = getv function %tmp.2 :getInitialView;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        ret %tmp.4;
+C_Users_Frank_Documents_Source_Ultrasonic_source_App_v2_0_mc_50_30_stop:
+    }
+}
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\App_v2.0.mc"; @line = 1; ]
+<init> {
+}

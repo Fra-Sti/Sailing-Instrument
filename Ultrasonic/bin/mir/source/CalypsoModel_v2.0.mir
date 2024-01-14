@@ -1,0 +1,596 @@
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 6; ]
+using Toybox.System;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 7; ]
+using Toybox.BluetoothLowEnergy as :Ble;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 8; ]
+using Toybox.Attention;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 11; ]
+class CalypsoModel extends Ble.BleDelegate{
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 11; ]
+    <init> {
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 27 17 ]
+        %tmp.1 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.2 = getv function %tmp.1 :stringToUuid;
+        %tmp.3 = "0000180D-0000-1000-8000-00805F9B34FB";
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        putv self :CALYPSO_DATA_SERVICE %tmp.4;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 28 17 ]
+        %tmp.5 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.6 = getv function %tmp.5 :stringToUuid;
+        %tmp.7 = "00002A39-0000-1000-8000-00805F9B34FB";
+        %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+        putv self :WIND_DATA_CHARACTERISTIC %tmp.8;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 29 17 ]
+        %tmp.9 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.10 = getv function %tmp.9 :stringToUuid;
+        %tmp.11 = "0000A002-0000-1000-8000-00805F9B34FB";
+        %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
+        putv self :DATA_RATE_CHARACTERISTIC %tmp.12;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 30 17 ]
+        %tmp.13 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.14 = getv function %tmp.13 :stringToUuid;
+        %tmp.15 = "0000A003-0000-1000-8000-00805F9B34FB";
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        putv self :PITCH_CHARACTERISTIC %tmp.16;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 32 18 ]
+        %tmp.17 = newd 2;
+        %tmp.19 = const :uuid;
+        %tmp.21 = getv ? :CALYPSO_DATA_SERVICE;
+        %tmp.22 = dup %tmp.17;
+        %tmp.23 = aputv %tmp.22 %tmp.19 %tmp.21;
+        %tmp.25 = const :characteristics;
+        %tmp.26 = newa 3;
+        %tmp.27 = newd 2;
+        %tmp.29 = const :uuid;
+        %tmp.31 = getv ? :WIND_DATA_CHARACTERISTIC;
+        %tmp.32 = dup %tmp.27;
+        %tmp.33 = aputv %tmp.32 %tmp.29 %tmp.31;
+        %tmp.35 = const :descriptors;
+        %tmp.36 = newa 1;
+        %tmp.37 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.38 = getv function %tmp.37 :cccdUuid;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        %tmp.40 = dup %tmp.36;
+        %tmp.41 = aputv %tmp.40 0 %tmp.39;
+        %tmp.42 = dup %tmp.33;
+        %tmp.43 = aputv %tmp.42 %tmp.35 %tmp.41;
+        %tmp.44 = dup %tmp.26;
+        %tmp.45 = aputv %tmp.44 0 %tmp.43;
+        %tmp.46 = newd 2;
+        %tmp.48 = const :uuid;
+        %tmp.50 = getv ? :DATA_RATE_CHARACTERISTIC;
+        %tmp.51 = dup %tmp.46;
+        %tmp.52 = aputv %tmp.51 %tmp.48 %tmp.50;
+        %tmp.54 = const :descriptors;
+        %tmp.55 = newa 1;
+        %tmp.56 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.57 = getv function %tmp.56 :cccdUuid;
+        %tmp.58 = invoke %tmp.56 %tmp.57();
+        %tmp.59 = dup %tmp.55;
+        %tmp.60 = aputv %tmp.59 0 %tmp.58;
+        %tmp.61 = dup %tmp.52;
+        %tmp.62 = aputv %tmp.61 %tmp.54 %tmp.60;
+        %tmp.63 = dup %tmp.45;
+        %tmp.64 = aputv %tmp.63 1 %tmp.62;
+        %tmp.65 = newd 2;
+        %tmp.67 = const :uuid;
+        %tmp.69 = getv ? :PITCH_CHARACTERISTIC;
+        %tmp.70 = dup %tmp.65;
+        %tmp.71 = aputv %tmp.70 %tmp.67 %tmp.69;
+        %tmp.73 = const :descriptors;
+        %tmp.74 = newa 1;
+        %tmp.75 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.76 = getv function %tmp.75 :cccdUuid;
+        %tmp.77 = invoke %tmp.75 %tmp.76();
+        %tmp.78 = dup %tmp.74;
+        %tmp.79 = aputv %tmp.78 0 %tmp.77;
+        %tmp.80 = dup %tmp.71;
+        %tmp.81 = aputv %tmp.80 %tmp.73 %tmp.79;
+        %tmp.82 = dup %tmp.64;
+        %tmp.83 = aputv %tmp.82 2 %tmp.81;
+        %tmp.84 = dup %tmp.23;
+        %tmp.85 = aputv %tmp.84 %tmp.25 %tmp.83;
+        putv self :_CalypsoProfileDef %tmp.85;
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 11; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 13; @position = 15; ]
+    protected
+    var _scanResults;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 14; @position = 15; ]
+    protected
+    var _scanState;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 15; @position = 15; ]
+    protected
+    var _calypsoData;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 17; @position = 15; ]
+    protected
+    var _NOTIFICATION;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 18; @position = 15; ]
+    protected
+    var _DATA_RATE;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 19; @position = 15; ]
+    protected
+    var _PITCH_ENABLED;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 21; @position = 15; ]
+    protected
+    var HighDataRate = false;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 22; @position = 15; ]
+    protected
+    var isCalypsoMini = false;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 24; @position = 15; ]
+    protected
+    var _config_next = 0;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 25; @position = 15; ]
+    protected
+    var _optional_sensors_enabled = false;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 27; @position = 17; ]
+    public
+    const CALYPSO_DATA_SERVICE;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 28; @position = 17; ]
+    public
+    const WIND_DATA_CHARACTERISTIC;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 29; @position = 17; ]
+    public
+    const DATA_RATE_CHARACTERISTIC;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 30; @position = 17; ]
+    public
+    const PITCH_CHARACTERISTIC;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 32; @position = 18; ]
+    private
+    const _CalypsoProfileDef;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 46; ]
+    function initialize() as Void {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_46_26_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 47 8 ]
+        %tmp.2 = getv ? :BleDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 48 8 ]
+        %tmp.4 = self;
+        %tmp.5 = getv function %tmp.4 :registerProfiles;
+        invoke %tmp.4 %tmp.5();
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 50 8 ]
+        %tmp.6 = newa 0;
+        putv self :_scanResults %tmp.6;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 51 8 ]
+        %tmp.7 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.8 = getv %tmp.7 :SCAN_STATE_OFF;
+        putv self :_scanState %tmp.8;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 52 8 ]
+        %tmp.9 = newa 0;
+        putv self :_calypsoData %tmp.9;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_46_26_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 55; ]
+    function onStart() {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_55_23_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 56 5 ]
+        %tmp.1 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.2 = getv function %tmp.1 :setScanState;
+        %tmp.3 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.4 = getv %tmp.3 :SCAN_STATE_SCANNING;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_55_23_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 59; ]
+    function onStop() {
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 63; ]
+    function onScanResults(scanResults) {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_63_40_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 64 8 ]
+        for @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_8_for_test @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_8_for_incr @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_8_for_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_8_for_init:
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_8_for_begin" "C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_8_for_end" ]
+        %result.1 = local;
+        %tmp.1 = lgetv %scanResults;
+        %tmp.2 = getv function %tmp.1 :next;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %result.1 %tmp.3;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_8_for_test:
+        %tmp.5 = lgetv %result.1;
+        %tmp.6 = null;
+        %tmp.7 = ne %tmp.5 %tmp.6;
+        bf %tmp.7 @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_8_for_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_8_for_begin:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_91_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 65 12 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_91_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_91_stop" ]
+        %name.2 = local;
+        %tmp.8 = lgetv %result.1;
+        %tmp.9 = as %tmp.8 { (!Null) };
+        %tmp.10 = getv function %tmp.9 :getDeviceName;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %name.2 %tmp.11;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 66 12 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_66_12_if_stmt:
+        %tmp.13 = lgetv %name.2;
+        %tmp.14 = null;
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        bf %tmp.15 @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_66_12_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_66_12_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_66_30_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 67 16 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_67_16_if_stmt:
+        %tmp.16 = lgetv %name.2;
+        %tmp.17 = as %tmp.16 { (!Null) };
+        %tmp.18 = getv function %tmp.17 :equals;
+        %tmp.19 = "ULTRASONIC";
+        %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
+        bf %tmp.20 @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_67_16_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_67_16_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_67_47_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 68 24 ]
+        %tmp.21 = getm $.Toybox.Attention;
+        %tmp.22 = getv function %tmp.21 :playTone;
+        %tmp.23 = getm $.Toybox.Attention;
+        %tmp.24 = getv %tmp.23 :TONE_LAP;
+        invoke %tmp.21 %tmp.22(%tmp.24);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 69 24 ]
+        %tmp.25 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.26 = getv function %tmp.25 :setScanState;
+        %tmp.27 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.28 = getv %tmp.27 :SCAN_STATE_OFF;
+        invoke %tmp.25 %tmp.26(%tmp.28);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 70 9 ]
+        %tmp.29 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.30 = getv function %tmp.29 :pairDevice;
+        %tmp.32 = lgetv %result.1;
+        %tmp.33 = as %tmp.32 { (!Null) };
+        invoke %tmp.29 %tmp.30(%tmp.33);
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_67_47_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_67_16_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_67_16_if_end:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_66_30_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_66_12_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_66_12_if_end:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_91_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_8_for_incr:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 64 ]
+        %tmp.34 = lgetv %scanResults;
+        %tmp.35 = getv function %tmp.34 :next;
+        %tmp.36 = invoke %tmp.34 %tmp.35();
+        lputv %result.1 %tmp.36;
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_8_for_test;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_64_8_for_end:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_63_40_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 76; ]
+    function onConnectedStateChanged(device, state) {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_76_52_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 77 2 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_77_2_if_stmt:
+        %tmp.2 = lgetv %state;
+        %tmp.3 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.4 = getv %tmp.3 :CONNECTION_STATE_CONNECTED;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_77_2_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_77_2_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_77_47_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 78 12 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_77_47_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_77_47_stop" ]
+        %service.1 = local;
+        %tmp.6 = lgetv %device;
+        %tmp.7 = getv function %tmp.6 :getService;
+        %tmp.9 = getv ? :CALYPSO_DATA_SERVICE;
+        %tmp.10 = invoke %tmp.6 %tmp.7(%tmp.9);
+        lputv %service.1 %tmp.10;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 79 12 ]
+        %tmp.11 = lgetv %service.1;
+        %tmp.12 = getv function %tmp.11 :getCharacteristic;
+        %tmp.14 = getv ? :WIND_DATA_CHARACTERISTIC;
+        %tmp.15 = invoke %tmp.11 %tmp.12(%tmp.14);
+        putv self :_NOTIFICATION %tmp.15;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 80 12 ]
+        %tmp.16 = lgetv %service.1;
+        %tmp.17 = getv function %tmp.16 :getCharacteristic;
+        %tmp.19 = getv ? :DATA_RATE_CHARACTERISTIC;
+        %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.19);
+        putv self :_DATA_RATE %tmp.20;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 81 12 ]
+        %tmp.21 = lgetv %service.1;
+        %tmp.22 = getv function %tmp.21 :getCharacteristic;
+        %tmp.24 = getv ? :PITCH_CHARACTERISTIC;
+        %tmp.25 = invoke %tmp.21 %tmp.22(%tmp.24);
+        putv self :_PITCH_ENABLED %tmp.25;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 82 12 ]
+        %tmp.26 = self;
+        %tmp.27 = getv function %tmp.26 :configureCalypso;
+        %tmp.28 = 0;
+        invoke %tmp.26 %tmp.27(%tmp.28);
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_77_47_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_77_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_77_2_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_83_15_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 84 3 ]
+        %tmp.29 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.30 = getv function %tmp.29 :setScanState;
+        %tmp.31 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.32 = getv %tmp.31 :SCAN_STATE_SCANNING;
+        invoke %tmp.29 %tmp.30(%tmp.32);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 85 3 ]
+        %tmp.33 = null;
+        putv self :_NOTIFICATION %tmp.33;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 86 3 ]
+        %tmp.34 = null;
+        putv self :_DATA_RATE %tmp.34;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 87 3 ]
+        %tmp.35 = null;
+        putv self :_PITCH_ENABLED %tmp.35;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 88 3 ]
+        %tmp.36 = newa 0;
+        putv self :_calypsoData %tmp.36;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 89 3 ]
+        %tmp.38 = getv ? :WatchUi;
+        %tmp.39 = getv function %tmp.38 :requestUpdate;
+        invoke %tmp.38 %tmp.39();
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_83_15_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_77_2_if_end:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_76_52_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 94; ]
+    function onCharacteristicChanged(char, value) {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_94_47_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 95 2 ]
+        %tmp.2 = lgetv %value;
+        putv self :_calypsoData %tmp.2;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 96 8 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_96_8_if_stmt:
+        %tmp.4 = getv ? :HighDataRate;
+        bf %tmp.4 @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_96_8_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_96_8_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_96_26_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 96 27 ]
+        %tmp.6 = getv ? :WatchUi;
+        %tmp.7 = getv function %tmp.6 :requestUpdate;
+        invoke %tmp.6 %tmp.7();
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_96_26_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_96_8_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_96_8_if_end:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_94_47_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 101; ]
+    function onCharacteristicWrite(characteristic, status) {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_101_59_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 102 4 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_102_4_if_stmt:
+        %tmp.2 = getv ? :_config_next;
+        %tmp.3 = 0;
+        %tmp.4 = gt %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_102_4_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_102_4_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_102_26_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 103 8 ]
+        %tmp.5 = self;
+        %tmp.6 = getv function %tmp.5 :configureCalypso;
+        %tmp.8 = getv ? :_config_next;
+        invoke %tmp.5 %tmp.6(%tmp.8);
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_102_26_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_102_4_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_102_4_if_end:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_101_59_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 107; ]
+    function configureCalypso(stage) {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_107_37_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 108 5 ]
+        %tmp.2 = lgetv %stage;
+        push %tmp.2;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_108_5_switchStmtBegin:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 109 5 ]
+        %tmp.3 = dup %tmp.2;
+        %tmp.4 = 0;
+        %tmp.5 = getv function %tmp.3 :equals;
+        %tmp.6 = invoke %tmp.3 %tmp.5 (%tmp.4);
+        bt %tmp.6 @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_109_5_switchCase;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 117 5 ]
+        %tmp.7 = dup %tmp.2;
+        %tmp.8 = 1;
+        %tmp.9 = getv function %tmp.7 :equals;
+        %tmp.10 = invoke %tmp.7 %tmp.9 (%tmp.8);
+        bt %tmp.10 @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_117_5_switchCase;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 125 5 ]
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_108_5_defaultCodeBegin;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_109_5_switchCase:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 110 12 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_110_12_if_stmt:
+        %tmp.12 = getv ? :HighDataRate;
+        %tmp.13 = false;
+        %tmp.14 = eq %tmp.12 %tmp.13;
+        bf %tmp.14 @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_110_12_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_110_12_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_110_39_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 111 16 ]
+        %tmp.16 = getv ? :_DATA_RATE;
+        %tmp.17 = getv function %tmp.16 :requestWrite;
+        %tmp.18 = newba 1;
+        %tmp.19 = 0x01;
+        %tmp.20 = dup %tmp.18;
+        %tmp.21 = aputv %tmp.20 0 %tmp.19;
+        %tmp.22 = newd 1;
+        %tmp.24 = const :writeType;
+        %tmp.25 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.26 = getv %tmp.25 :WRITE_TYPE_WITH_RESPONSE;
+        %tmp.27 = dup %tmp.22;
+        %tmp.28 = aputv %tmp.27 %tmp.24 %tmp.26;
+        invoke %tmp.16 %tmp.17(%tmp.21, %tmp.28);
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_110_39_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_110_12_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_110_12_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_112_19_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 113 16 ]
+        %tmp.30 = getv ? :_DATA_RATE;
+        %tmp.31 = getv function %tmp.30 :requestWrite;
+        %tmp.32 = newba 1;
+        %tmp.33 = 0x04;
+        %tmp.34 = dup %tmp.32;
+        %tmp.35 = aputv %tmp.34 0 %tmp.33;
+        %tmp.36 = newd 1;
+        %tmp.38 = const :writeType;
+        %tmp.39 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.40 = getv %tmp.39 :WRITE_TYPE_WITH_RESPONSE;
+        %tmp.41 = dup %tmp.36;
+        %tmp.42 = aputv %tmp.41 %tmp.38 %tmp.40;
+        invoke %tmp.30 %tmp.31(%tmp.35, %tmp.42);
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_112_19_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_110_12_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 115 6 ]
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_108_5_switchStmtEnd;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_117_5_switchCase:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 118 12 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_118_12_if_stmt:
+        %tmp.44 = getv ? :_optional_sensors_enabled;
+        %tmp.45 = false;
+        %tmp.46 = eq %tmp.44 %tmp.45;
+        bf %tmp.46 @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_118_12_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_118_12_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_118_52_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 119 16 ]
+        %tmp.48 = getv ? :_PITCH_ENABLED;
+        %tmp.49 = getv function %tmp.48 :requestWrite;
+        %tmp.50 = newba 1;
+        %tmp.51 = 0x00;
+        %tmp.52 = dup %tmp.50;
+        %tmp.53 = aputv %tmp.52 0 %tmp.51;
+        %tmp.54 = newd 1;
+        %tmp.56 = const :writeType;
+        %tmp.57 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.58 = getv %tmp.57 :WRITE_TYPE_WITH_RESPONSE;
+        %tmp.59 = dup %tmp.54;
+        %tmp.60 = aputv %tmp.59 %tmp.56 %tmp.58;
+        invoke %tmp.48 %tmp.49(%tmp.53, %tmp.60);
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_118_52_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_118_12_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_118_12_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_120_19_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 121 16 ]
+        %tmp.62 = getv ? :_PITCH_ENABLED;
+        %tmp.63 = getv function %tmp.62 :requestWrite;
+        %tmp.64 = newba 1;
+        %tmp.65 = 0x01;
+        %tmp.66 = dup %tmp.64;
+        %tmp.67 = aputv %tmp.66 0 %tmp.65;
+        %tmp.68 = newd 1;
+        %tmp.70 = const :writeType;
+        %tmp.71 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.72 = getv %tmp.71 :WRITE_TYPE_WITH_RESPONSE;
+        %tmp.73 = dup %tmp.68;
+        %tmp.74 = aputv %tmp.73 %tmp.70 %tmp.72;
+        invoke %tmp.62 %tmp.63(%tmp.67, %tmp.74);
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_120_19_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_118_12_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 123 6 ]
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_108_5_switchStmtEnd;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_125_5_switchCase:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_108_5_defaultCodeBegin:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 127 6 ]
+        %tmp.76 = getv ? :_NOTIFICATION;
+        %tmp.77 = getv function %tmp.76 :getDescriptor;
+        %tmp.78 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.79 = getv function %tmp.78 :cccdUuid;
+        %tmp.80 = invoke %tmp.78 %tmp.79();
+        %tmp.81 = invoke %tmp.76 %tmp.77(%tmp.80);
+        %tmp.82 = getv function %tmp.81 :requestWrite;
+        %tmp.83 = newba 2;
+        %tmp.84 = 0x01;
+        %tmp.85 = dup %tmp.83;
+        %tmp.86 = aputv %tmp.85 0 %tmp.84;
+        %tmp.87 = 0x00;
+        %tmp.88 = dup %tmp.86;
+        %tmp.89 = aputv %tmp.88 1 %tmp.87;
+        invoke %tmp.81 %tmp.82(%tmp.89);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 128 6 ]
+        %tmp.90 = -1;
+        putv self :_config_next %tmp.90;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 129 6 ]
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_108_5_switchStmtEnd;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_108_5_switchStmtEnd:
+        pop;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 131 8 ]
+        %tmp.91 = getv self :_config_next;
+        %tmp.92 = 1;
+        %tmp.93 = add %tmp.91 %tmp.92;
+        putv self :_config_next dup %tmp.93;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_107_37_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 134; ]
+    function getSensorData() {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_134_29_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 135 5 ]
+        %tmp.2 = getv ? :_calypsoData;
+        ret %tmp.2;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_134_29_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 138; ]
+    function setDataRate(freq) {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_138_31_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 139 8 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_139_8_if_stmt:
+        %tmp.2 = lgetv %freq;
+        %tmp.3 = 1;
+        %tmp.4 = gt %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_139_8_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_139_8_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_139_22_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 139 23 ]
+        %tmp.5 = true;
+        putv self :HighDataRate %tmp.5;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_139_22_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_139_8_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_139_8_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_140_13_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 140 14 ]
+        %tmp.6 = false;
+        putv self :HighDataRate %tmp.6;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_140_13_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_139_8_if_end:
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_138_31_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 143; ]
+    function enableOptSensors(b) {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_143_33_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 144 8 ]
+        %tmp.2 = lgetv %b;
+        putv self :_optional_sensors_enabled %tmp.2;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_143_33_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 147; ]
+    function onScanStateChange(scanState, status) {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_147_50_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 148 8 ]
+        %tmp.2 = lgetv %scanState;
+        putv self :_scanState %tmp.2;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 149 8 ]
+        %tmp.4 = getv ? :WatchUi;
+        %tmp.5 = getv function %tmp.4 :requestUpdate;
+        invoke %tmp.4 %tmp.5();
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_147_50_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 152; ]
+    function isScanning() {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_152_26_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 153 8 ]
+        %tmp.2 = getv ? :_scanState;
+        %tmp.3 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.4 = getv %tmp.3 :SCAN_STATE_OFF;
+        %tmp.5 = ne %tmp.2 %tmp.4;
+        ret %tmp.5;
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_152_26_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 156; ]
+    function registerProfiles() {
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_156_32_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc" 157 2 ]
+        %tmp.1 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.2 = getv function %tmp.1 :registerProfile;
+        %tmp.4 = getv ? :_CalypsoProfileDef;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+C_Users_Frank_Documents_Source_Ultrasonic_source_CalypsoModel_v2_0_mc_156_32_stop:
+    }
+}
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\CalypsoModel_v2.0.mc"; @line = 6; ]
+<init> {
+}

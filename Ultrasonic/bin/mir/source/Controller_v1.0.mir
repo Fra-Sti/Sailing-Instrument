@@ -1,0 +1,78 @@
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 1; ]
+using Toybox.Application;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 3; ]
+using Toybox.System;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 4; ]
+using Toybox.BluetoothLowEnergy as :Ble;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 7; ]
+class UltrasonicController extends WatchUi.BehaviorDelegate{
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 9; @position = 15; ]
+    protected
+    var _view;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 10; @position = 15; ]
+    protected
+    var _model;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 11; @position = 15; ]
+    protected
+    var _app;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 13; ]
+    function initialize(model, app) as Void {
+C_Users_Frank_Documents_Source_Ultrasonic_source_Controller_v1_0_mc_13_36_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc" 14 8 ]
+        %tmp.2 = getv ? :BehaviorDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc" 15 8 ]
+        %tmp.5 = lgetv %model;
+        putv self :_model %tmp.5;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc" 16 8 ]
+        %tmp.7 = lgetv %app;
+        putv self :_app %tmp.7;
+C_Users_Frank_Documents_Source_Ultrasonic_source_Controller_v1_0_mc_13_36_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 19; ]
+    function onStart() {
+C_Users_Frank_Documents_Source_Ultrasonic_source_Controller_v1_0_mc_19_23_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc" 20 8 ]
+        %tmp.1 = getm $.Toybox.BluetoothLowEnergy;
+        %tmp.2 = getv function %tmp.1 :setDelegate;
+        %tmp.4 = getv ? :_model;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+C_Users_Frank_Documents_Source_Ultrasonic_source_Controller_v1_0_mc_19_23_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 23; ]
+    function onStop() {
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 26; ]
+    function getInitialView() {
+C_Users_Frank_Documents_Source_Ultrasonic_source_Controller_v1_0_mc_26_30_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc" 27 8 ]
+        %tmp.4 = getv ? :UltrasonicView;
+        %tmp.6 = getv ? :_model;
+        %tmp.8 = getv ? :_app;
+        %tmp.1 = newc %tmp.4 (%tmp.6, %tmp.8);
+        putv self :_view %tmp.1;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc" 28 8 ]
+        %tmp.9 = newa 2;
+        %tmp.11 = getv ? :_view;
+        %tmp.12 = dup %tmp.9;
+        %tmp.13 = aputv %tmp.12 0 %tmp.11;
+        %tmp.15 = lgetv %self;
+        %tmp.16 = dup %tmp.13;
+        %tmp.17 = aputv %tmp.16 1 %tmp.15;
+        ret %tmp.17;
+C_Users_Frank_Documents_Source_Ultrasonic_source_Controller_v1_0_mc_26_30_stop:
+    }
+}
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\Controller_v1.0.mc"; @line = 1; ]
+<init> {
+}

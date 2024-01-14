@@ -1,0 +1,19 @@
+<settings>
+
+<setting propertyKey="@Properties.WindRose" title="@Strings.WindRose">
+<settingConfig type="boolean" />
+</setting>
+
+<setting propertyKey="@Properties.WindSpeed" title="@Strings.WindSpeed">
+<settingConfig type="boolean" />
+</setting>
+
+<setting propertyKey="@Properties.WindUnit" title="@Strings.WindUnit">
+<settingConfig type="boolean" />
+</setting>
+
+<setting propertyKey="@Properties.Hz" title="@Strings.Hz">
+<settingConfig type="boolean" />
+</setting>
+
+</settings>

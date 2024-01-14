@@ -1,0 +1,19 @@
+<resources>
+<fitContributions>
+        <fitField id="0" displayInChart="true" sortOrder = "0" precision="1"
+        chartTitle="@Strings.ultrasonic_graph_label_TWS" dataLabel="@Strings.ultrasonic_label_TWS"
+        unitLabel="@Strings.ultrasonic_units_TWS" fillColor="#eadebd" />
+    
+        <fitField id="1" displayInChart="true" sortOrder = "1" precision="1"
+        chartTitle="@Strings.ultrasonic_graph_label_TWA" dataLabel="@Strings.ultrasonic_label_TWA"
+        unitLabel="@Strings.ultrasonic_units_TWA" fillColor="#86a47c" />
+ 
+        <fitField id="2" displayInChart="true" sortOrder = "2" precision="1"
+        chartTitle="@Strings.ultrasonic_graph_label_AWS" dataLabel="@Strings.ultrasonic_label_AWS"
+        unitLabel="@Strings.ultrasonic_units_AWS" fillColor="#dfcea1" />
+      
+        <fitField id="3" displayInChart="true" sortOrder = "3" precision="1"
+        chartTitle="@Strings.ultrasonic_graph_label_AWA" dataLabel="@Strings.ultrasonic_label_AWA"
+        unitLabel="@Strings.ultrasonic_units_AWA" fillColor="#317f43" />
+</fitContributions>
+</resources>

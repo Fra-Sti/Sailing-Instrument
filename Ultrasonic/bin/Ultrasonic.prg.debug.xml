@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\Users\Frank\Documents\Source\Ultrasonic\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\bin\\gen\\006-B4313-00\\source\\Rez.mcgen" id="1" lineNum="7" parent="globals/Rez" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="2" lineNum="5" parent="globals/UltrasonicApp" pc="268435484" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="14" parent="globals/UltrasonicApp" pc="268435503" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="17" parent="globals/UltrasonicApp" pc="268435505" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="18" parent="globals/UltrasonicApp" pc="268435532" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="19" parent="globals/UltrasonicApp" pc="268435557" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="20" parent="globals/UltrasonicApp" pc="268435582" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="21" parent="globals/UltrasonicApp" pc="268435607" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="25" parent="globals/UltrasonicApp" pc="268435635" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="27" parent="globals/UltrasonicApp" pc="268435669" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="28" parent="globals/UltrasonicApp" pc="268435689" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="28" parent="globals/UltrasonicApp" pc="268435717" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="29" parent="globals/UltrasonicApp" pc="268435743" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="31" parent="globals/UltrasonicApp" pc="268435766" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="34" parent="globals/UltrasonicApp" pc="268435784" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="3" lineNum="35" parent="globals/UltrasonicApp" pc="268435828" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="4" lineNum="38" parent="globals/UltrasonicApp" pc="268435847" symbol="onPosition"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="5" lineNum="50" parent="globals/UltrasonicApp" pc="268435850" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="5" lineNum="51" parent="globals/UltrasonicApp" pc="268435852" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="6" lineNum="10" parent="globals/UltrasonicApp" pc="268435870" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="6" lineNum="11" parent="globals/UltrasonicApp" pc="268435872" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="7" lineNum="42" parent="globals/UltrasonicApp" pc="268435891" symbol="onStop"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="7" lineNum="43" parent="globals/UltrasonicApp" pc="268435893" symbol="onStop"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="7" lineNum="44" parent="globals/UltrasonicApp" pc="268435911" symbol="onStop"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="7" lineNum="46" parent="globals/UltrasonicApp" pc="268435920" symbol="onStop"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\App_v2.0.mc" id="7" lineNum="47" parent="globals/UltrasonicApp" pc="268435938" symbol="onStop"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\Controller_v1.0.mc" id="8" lineNum="7" parent="globals/UltrasonicController" pc="268435948" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\Controller_v1.0.mc" id="9" lineNum="19" parent="globals/UltrasonicController" pc="268435967" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\Controller_v1.0.mc" id="9" lineNum="20" parent="globals/UltrasonicController" pc="268435969" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\Controller_v1.0.mc" id="10" lineNum="26" parent="globals/UltrasonicController" pc="268435994" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\Controller_v1.0.mc" id="10" lineNum="27" parent="globals/UltrasonicController" pc="268435996" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\Controller_v1.0.mc" id="10" lineNum="28" parent="globals/UltrasonicController" pc="268436046" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\Controller_v1.0.mc" id="11" lineNum="13" parent="globals/UltrasonicController" pc="268436079" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\Controller_v1.0.mc" id="11" lineNum="14" parent="globals/UltrasonicController" pc="268436081" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\Controller_v1.0.mc" id="11" lineNum="15" parent="globals/UltrasonicController" pc="268436099" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\Controller_v1.0.mc" id="11" lineNum="16" parent="globals/UltrasonicController" pc="268436109" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="13" lineNum="11" parent="globals/CalypsoModel" pc="268436120" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="13" lineNum="27" parent="globals/CalypsoModel" pc="268436138" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="13" lineNum="28" parent="globals/CalypsoModel" pc="268436166" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="13" lineNum="29" parent="globals/CalypsoModel" pc="268436194" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="13" lineNum="30" parent="globals/CalypsoModel" pc="268436222" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="13" lineNum="32" parent="globals/CalypsoModel" pc="268436250" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="14" lineNum="134" parent="globals/CalypsoModel" pc="268436496" symbol="getSensorData"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="14" lineNum="135" parent="globals/CalypsoModel" pc="268436498" symbol="getSensorData"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="15" lineNum="156" parent="globals/CalypsoModel" pc="268436507" symbol="registerProfiles"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="15" lineNum="157" parent="globals/CalypsoModel" pc="268436509" symbol="registerProfiles"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="16" lineNum="55" parent="globals/CalypsoModel" pc="268436534" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="16" lineNum="56" parent="globals/CalypsoModel" pc="268436536" symbol="onStart"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="17" lineNum="152" parent="globals/CalypsoModel" pc="268436558" symbol="isScanning"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="17" lineNum="153" parent="globals/CalypsoModel" pc="268436560" symbol="isScanning"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="18" lineNum="138" parent="globals/CalypsoModel" pc="268436575" symbol="setDataRate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="18" lineNum="139" parent="globals/CalypsoModel" pc="268436577" symbol="setDataRate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="18" lineNum="139" parent="globals/CalypsoModel" pc="268436588" symbol="setDataRate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="18" lineNum="140" parent="globals/CalypsoModel" pc="268436601" symbol="setDataRate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="20" lineNum="63" parent="globals/CalypsoModel" pc="268436612" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="20" lineNum="64" parent="globals/CalypsoModel" pc="268436616" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="20" lineNum="65" parent="globals/CalypsoModel" pc="268436636" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="20" lineNum="66" parent="globals/CalypsoModel" pc="268436649" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="20" lineNum="67" parent="globals/CalypsoModel" pc="268436656" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="20" lineNum="68" parent="globals/CalypsoModel" pc="268436675" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="20" lineNum="69" parent="globals/CalypsoModel" pc="268436696" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="20" lineNum="70" parent="globals/CalypsoModel" pc="268436717" symbol="onScanResults"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="21" lineNum="94" parent="globals/CalypsoModel" pc="268436758" symbol="onCharacteristicChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="21" lineNum="95" parent="globals/CalypsoModel" pc="268436760" symbol="onCharacteristicChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="21" lineNum="96" parent="globals/CalypsoModel" pc="268436770" symbol="onCharacteristicChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="21" lineNum="96" parent="globals/CalypsoModel" pc="268436781" symbol="onCharacteristicChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="22" lineNum="101" parent="globals/CalypsoModel" pc="268436803" symbol="onCharacteristicWrite"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="22" lineNum="102" parent="globals/CalypsoModel" pc="268436805" symbol="onCharacteristicWrite"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="22" lineNum="103" parent="globals/CalypsoModel" pc="268436822" symbol="onCharacteristicWrite"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="76" parent="globals/CalypsoModel" pc="268436846" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="77" parent="globals/CalypsoModel" pc="268436850" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="78" parent="globals/CalypsoModel" pc="268436861" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="79" parent="globals/CalypsoModel" pc="268436882" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="80" parent="globals/CalypsoModel" pc="268436909" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="81" parent="globals/CalypsoModel" pc="268436936" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="82" parent="globals/CalypsoModel" pc="268436963" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="84" parent="globals/CalypsoModel" pc="268436983" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="85" parent="globals/CalypsoModel" pc="268437004" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="86" parent="globals/CalypsoModel" pc="268437013" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="87" parent="globals/CalypsoModel" pc="268437022" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="88" parent="globals/CalypsoModel" pc="268437031" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="23" lineNum="89" parent="globals/CalypsoModel" pc="268437045" symbol="onConnectedStateChanged"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="24" lineNum="147" parent="globals/CalypsoModel" pc="268437064" symbol="onScanStateChange"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="24" lineNum="148" parent="globals/CalypsoModel" pc="268437066" symbol="onScanStateChange"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="24" lineNum="149" parent="globals/CalypsoModel" pc="268437076" symbol="onScanStateChange"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="25" lineNum="46" parent="globals/CalypsoModel" pc="268437095" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="25" lineNum="47" parent="globals/CalypsoModel" pc="268437097" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="25" lineNum="48" parent="globals/CalypsoModel" pc="268437115" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="25" lineNum="50" parent="globals/CalypsoModel" pc="268437127" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="25" lineNum="51" parent="globals/CalypsoModel" pc="268437141" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="25" lineNum="52" parent="globals/CalypsoModel" pc="268437154" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="107" parent="globals/CalypsoModel" pc="268437169" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="108" parent="globals/CalypsoModel" pc="268437171" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="109" parent="globals/CalypsoModel" pc="268437173" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="117" parent="globals/CalypsoModel" pc="268437193" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="125" parent="globals/CalypsoModel" pc="268437213" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="110" parent="globals/CalypsoModel" pc="268437216" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="111" parent="globals/CalypsoModel" pc="268437230" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="113" parent="globals/CalypsoModel" pc="268437289" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="115" parent="globals/CalypsoModel" pc="268437345" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="118" parent="globals/CalypsoModel" pc="268437348" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="119" parent="globals/CalypsoModel" pc="268437362" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="121" parent="globals/CalypsoModel" pc="268437421" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="123" parent="globals/CalypsoModel" pc="268437477" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="127" parent="globals/CalypsoModel" pc="268437480" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="128" parent="globals/CalypsoModel" pc="268437554" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="129" parent="globals/CalypsoModel" pc="268437567" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="26" lineNum="131" parent="globals/CalypsoModel" pc="268437571" symbol="configureCalypso"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="27" lineNum="143" parent="globals/CalypsoModel" pc="268437591" symbol="enableOptSensors"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\CalypsoModel_v2.0.mc" id="27" lineNum="144" parent="globals/CalypsoModel" pc="268437593" symbol="enableOptSensors"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="28" lineNum="11" parent="globals/UltrasonicView" pc="268437604" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="28" lineNum="30" parent="globals/UltrasonicView" pc="268437622" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="28" lineNum="49" parent="globals/UltrasonicView" pc="268437675" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="28" lineNum="61" parent="globals/UltrasonicView" pc="268438025" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="29" lineNum="361" parent="globals/UltrasonicView" pc="268438376" symbol="compute"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="29" lineNum="363" parent="globals/UltrasonicView" pc="268438378" symbol="compute"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="29" lineNum="364" parent="globals/UltrasonicView" pc="268438389" symbol="compute"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="29" lineNum="365" parent="globals/UltrasonicView" pc="268438402" symbol="compute"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="29" lineNum="367" parent="globals/UltrasonicView" pc="268438421" symbol="compute"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="29" lineNum="371" parent="globals/UltrasonicView" pc="268438437" symbol="compute"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="29" lineNum="372" parent="globals/UltrasonicView" pc="268438472" symbol="compute"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="29" lineNum="373" parent="globals/UltrasonicView" pc="268438498" symbol="compute"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="29" lineNum="374" parent="globals/UltrasonicView" pc="268438533" symbol="compute"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="93" parent="globals/UltrasonicView" pc="268438560" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="95" parent="globals/UltrasonicView" pc="268438562" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="96" parent="globals/UltrasonicView" pc="268438587" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="97" parent="globals/UltrasonicView" pc="268438612" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="99" parent="globals/UltrasonicView" pc="268438637" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="100" parent="globals/UltrasonicView" pc="268438650" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="102" parent="globals/UltrasonicView" pc="268438677" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="103" parent="globals/UltrasonicView" pc="268438690" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="105" parent="globals/UltrasonicView" pc="268438717" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="106" parent="globals/UltrasonicView" pc="268438730" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="108" parent="globals/UltrasonicView" pc="268438757" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="109" parent="globals/UltrasonicView" pc="268438770" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="111" parent="globals/UltrasonicView" pc="268438797" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="112" parent="globals/UltrasonicView" pc="268438810" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="113" parent="globals/UltrasonicView" pc="268438823" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="115" parent="globals/UltrasonicView" pc="268438836" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="30" lineNum="116" parent="globals/UltrasonicView" pc="268438855" symbol="onLayout"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="75" parent="globals/UltrasonicView" pc="268438875" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="76" parent="globals/UltrasonicView" pc="268438877" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="77" parent="globals/UltrasonicView" pc="268438895" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="78" parent="globals/UltrasonicView" pc="268438905" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="81" parent="globals/UltrasonicView" pc="268438915" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="82" parent="globals/UltrasonicView" pc="268438984" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="83" parent="globals/UltrasonicView" pc="268439050" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="84" parent="globals/UltrasonicView" pc="268439119" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="87" parent="globals/UltrasonicView" pc="268439185" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="87" parent="globals/UltrasonicView" pc="268439213" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="88" parent="globals/UltrasonicView" pc="268439235" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="88" parent="globals/UltrasonicView" pc="268439263" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="89" parent="globals/UltrasonicView" pc="268439285" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="31" lineNum="89" parent="globals/UltrasonicView" pc="268439313" symbol="initialize"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="121" parent="globals/UltrasonicView" pc="268439336" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="123" parent="globals/UltrasonicView" pc="268439340" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="122" parent="globals/UltrasonicView" pc="268439340" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="124" parent="globals/UltrasonicView" pc="268439347" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="126" parent="globals/UltrasonicView" pc="268439354" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="128" parent="globals/UltrasonicView" pc="268439354" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="130" parent="globals/UltrasonicView" pc="268439361" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="138" parent="globals/UltrasonicView" pc="268439364" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="139" parent="globals/UltrasonicView" pc="268439384" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="140" parent="globals/UltrasonicView" pc="268439391" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="142" parent="globals/UltrasonicView" pc="268439416" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="143" parent="globals/UltrasonicView" pc="268439423" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="146" parent="globals/UltrasonicView" pc="268439445" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="149" parent="globals/UltrasonicView" pc="268439457" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="150" parent="globals/UltrasonicView" pc="268439476" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="154" parent="globals/UltrasonicView" pc="268439495" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="155" parent="globals/UltrasonicView" pc="268439633" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="159" parent="globals/UltrasonicView" pc="268439646" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="160" parent="globals/UltrasonicView" pc="268439666" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="162" parent="globals/UltrasonicView" pc="268439673" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="163" parent="globals/UltrasonicView" pc="268439681" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="167" parent="globals/UltrasonicView" pc="268439691" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="168" parent="globals/UltrasonicView" pc="268439713" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="169" parent="globals/UltrasonicView" pc="268439730" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="170" parent="globals/UltrasonicView" pc="268439798" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="173" parent="globals/UltrasonicView" pc="268440010" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="176" parent="globals/UltrasonicView" pc="268440024" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="177" parent="globals/UltrasonicView" pc="268440043" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="178" parent="globals/UltrasonicView" pc="268440095" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="182" parent="globals/UltrasonicView" pc="268440099" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="183" parent="globals/UltrasonicView" pc="268440119" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="184" parent="globals/UltrasonicView" pc="268440157" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="185" parent="globals/UltrasonicView" pc="268440189" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="187" parent="globals/UltrasonicView" pc="268440199" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="197" parent="globals/UltrasonicView" pc="268440218" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="199" parent="globals/UltrasonicView" pc="268440235" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="200" parent="globals/UltrasonicView" pc="268440287" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="202" parent="globals/UltrasonicView" pc="268440339" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="203" parent="globals/UltrasonicView" pc="268440352" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="205" parent="globals/UltrasonicView" pc="268440356" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="206" parent="globals/UltrasonicView" pc="268440401" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="207" parent="globals/UltrasonicView" pc="268440435" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="209" parent="globals/UltrasonicView" pc="268440481" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="209" parent="globals/UltrasonicView" pc="268440498" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="210" parent="globals/UltrasonicView" pc="268440517" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="212" parent="globals/UltrasonicView" pc="268440539" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="213" parent="globals/UltrasonicView" pc="268440570" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="214" parent="globals/UltrasonicView" pc="268440586" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="215" parent="globals/UltrasonicView" pc="268440602" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="219" parent="globals/UltrasonicView" pc="268440618" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="220" parent="globals/UltrasonicView" pc="268440634" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="221" parent="globals/UltrasonicView" pc="268440650" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="226" parent="globals/UltrasonicView" pc="268440660" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="227" parent="globals/UltrasonicView" pc="268440683" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="227" parent="globals/UltrasonicView" pc="268440706" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="228" parent="globals/UltrasonicView" pc="268440734" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="230" parent="globals/UltrasonicView" pc="268440762" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="230" parent="globals/UltrasonicView" pc="268440785" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="231" parent="globals/UltrasonicView" pc="268440804" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="240" parent="globals/UltrasonicView" pc="268440820" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="243" parent="globals/UltrasonicView" pc="268440846" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="244" parent="globals/UltrasonicView" pc="268440862" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="245" parent="globals/UltrasonicView" pc="268440887" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="247" parent="globals/UltrasonicView" pc="268440912" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="248" parent="globals/UltrasonicView" pc="268440928" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="249" parent="globals/UltrasonicView" pc="268440953" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="251" parent="globals/UltrasonicView" pc="268440978" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="252" parent="globals/UltrasonicView" pc="268440988" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="253" parent="globals/UltrasonicView" pc="268441013" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="255" parent="globals/UltrasonicView" pc="268441038" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="259" parent="globals/UltrasonicView" pc="268441048" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="261" parent="globals/UltrasonicView" pc="268441065" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="262" parent="globals/UltrasonicView" pc="268441087" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="264" parent="globals/UltrasonicView" pc="268441138" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="265" parent="globals/UltrasonicView" pc="268441160" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="268" parent="globals/UltrasonicView" pc="268441211" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="269" parent="globals/UltrasonicView" pc="268441230" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="270" parent="globals/UltrasonicView" pc="268441247" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="271" parent="globals/UltrasonicView" pc="268441265" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="281" parent="globals/UltrasonicView" pc="268441394" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="282" parent="globals/UltrasonicView" pc="268441475" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="282" parent="globals/UltrasonicView" pc="268441498" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="283" parent="globals/UltrasonicView" pc="268441556" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="286" parent="globals/UltrasonicView" pc="268441611" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="287" parent="globals/UltrasonicView" pc="268441716" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="290" parent="globals/UltrasonicView" pc="268441783" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="291" parent="globals/UltrasonicView" pc="268441882" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="295" parent="globals/UltrasonicView" pc="268441949" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="296" parent="globals/UltrasonicView" pc="268441966" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="298" parent="globals/UltrasonicView" pc="268441989" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="302" parent="globals/UltrasonicView" pc="268442069" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="305" parent="globals/UltrasonicView" pc="268442118" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="309" parent="globals/UltrasonicView" pc="268442198" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="314" parent="globals/UltrasonicView" pc="268442244" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="315" parent="globals/UltrasonicView" pc="268442261" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="323" parent="globals/UltrasonicView" pc="268442341" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="325" parent="globals/UltrasonicView" pc="268442358" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="325" parent="globals/UltrasonicView" pc="268442369" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="326" parent="globals/UltrasonicView" pc="268442426" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="330" parent="globals/UltrasonicView" pc="268442480" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="331" parent="globals/UltrasonicView" pc="268442496" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="333" parent="globals/UltrasonicView" pc="268442521" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="335" parent="globals/UltrasonicView" pc="268442538" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="336" parent="globals/UltrasonicView" pc="268442556" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="337" parent="globals/UltrasonicView" pc="268442564" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="339" parent="globals/UltrasonicView" pc="268442589" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="341" parent="globals/UltrasonicView" pc="268442611" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="343" parent="globals/UltrasonicView" pc="268442695" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="344" parent="globals/UltrasonicView" pc="268442714" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="345" parent="globals/UltrasonicView" pc="268442767" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="350" parent="globals/UltrasonicView" pc="268442832" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="352" parent="globals/UltrasonicView" pc="268442851" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="353" parent="globals/UltrasonicView" pc="268442941" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\Frank\\Documents\\Source\\Ultrasonic\\source\\View_v2.0.mc" id="32" lineNum="355" parent="globals/UltrasonicView" pc="268442987" symbol="onUpdate"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="58" symbol="_ljust"/>
+        <entry id="42" method="true" symbol="setDataRate"/>
+        <entry field="true" id="49" symbol="_cjust"/>
+        <entry field="true" id="69" symbol="field"/>
+        <entry field="true" id="77" symbol="WindUnit"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="7" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="8389849" symbol="units"/>
+        <entry field="true" id="79" symbol="ultrasonic_graph_label_AWS"/>
+        <entry field="true" id="78" symbol="ultrasonic_graph_label_AWA"/>
+        <entry field="true" id="45" symbol="COG"/>
+        <entry field="true" id="29" symbol="_NOTIFICATION"/>
+        <entry field="true" id="14" symbol="WIND_UNIT"/>
+        <entry field="true" id="81" symbol="ultrasonic_graph_label_TWS"/>
+        <entry field="true" id="83" symbol="ultrasonic_label_AWS"/>
+        <entry field="true" id="80" symbol="ultrasonic_graph_label_TWA"/>
+        <entry field="true" id="82" symbol="ultrasonic_label_AWA"/>
+        <entry field="true" id="18" symbol="_model"/>
+        <entry field="true" id="85" symbol="ultrasonic_label_TWS"/>
+        <entry field="true" id="84" symbol="ultrasonic_label_TWA"/>
+        <entry id="12" object="true" symbol="UltrasonicView"/>
+        <entry id="11" object="true" symbol="UltrasonicController"/>
+        <entry id="19" method="true" symbol="onPosition"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="8391256" method="true" symbol="onScanResults"/>
+        <entry field="true" id="73" symbol="AppName"/>
+        <entry id="8391255" method="true" symbol="onScanStateChange"/>
+        <entry field="true" id="61" symbol="_ultrasonicFitField_AWS"/>
+        <entry id="8" module="true" symbol="globals/Rez/Strings"/>
+        <entry field="true" id="60" symbol="_ultrasonicFitField_AWA"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry field="true" id="26" symbol="WIND_DATA_CHARACTERISTIC"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry field="true" id="63" symbol="_ultrasonicFitField_TWS"/>
+        <entry field="true" id="62" symbol="_ultrasonicFitField_TWA"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry field="true" id="8389138" symbol="label"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8391340" symbol="descriptors"/>
+        <entry field="true" id="65" symbol="_viewWidth"/>
+        <entry field="true" id="28" symbol="_DATA_RATE"/>
+        <entry field="true" id="25" symbol="PITCH_CHARACTERISTIC"/>
+        <entry field="true" id="51" symbol="_font_large"/>
+        <entry field="true" id="68" symbol="f_sin"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="35" symbol="_scanState"/>
+        <entry field="true" id="50" symbol="_font"/>
+        <entry field="true" id="44" symbol="AWS"/>
+        <entry field="true" id="43" symbol="AWD"/>
+        <entry field="true" id="33" symbol="_optional_sensors_enabled"/>
+        <entry field="true" id="71" symbol="y0"/>
+        <entry field="true" id="70" symbol="x0"/>
+        <entry id="8391263" method="true" symbol="onCharacteristicChanged"/>
+        <entry field="true" id="23" symbol="DATA_RATE_CHARACTERISTIC"/>
+        <entry field="true" id="75" symbol="WindRose"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8391258" method="true" symbol="onConnectedStateChanged"/>
+        <entry field="true" id="48" symbol="TWS"/>
+        <entry id="9" object="true" symbol="CalypsoModel"/>
+        <entry field="true" id="47" symbol="TWD"/>
+        <entry field="true" id="64" symbol="_viewHeight"/>
+        <entry id="16" module="true" symbol="Menus"/>
+        <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+        <entry field="true" id="53" symbol="_font_small"/>
+        <entry field="true" id="8389850" symbol="count"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="8388738" symbol="currentSpeed"/>
+        <entry field="true" id="52" symbol="_font_medium"/>
+        <entry id="8389137" method="true" symbol="compute"/>
+        <entry field="true" id="30" symbol="_PITCH_ENABLED"/>
+        <entry field="true" id="34" symbol="_scanResults"/>
+        <entry id="5" module="true" symbol="globals/Rez/JsonData"/>
+        <entry field="true" id="20" symbol="_app"/>
+        <entry id="8391335" symbol="writeType"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="31" symbol="_calypsoData"/>
+        <entry field="true" id="46" symbol="SOG"/>
+        <entry field="true" id="74" symbol="Hz"/>
+        <entry field="true" id="87" symbol="ultrasonic_units_AWS"/>
+        <entry field="true" id="86" symbol="ultrasonic_units_AWA"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="41" method="true" symbol="registerProfiles"/>
+        <entry id="37" method="true" symbol="enableOptSensors"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="13" symbol="WIND_FACTOR"/>
+        <entry field="true" id="89" symbol="ultrasonic_units_TWS"/>
+        <entry field="true" id="88" symbol="ultrasonic_units_TWA"/>
+        <entry field="true" id="54" symbol="_lineHeight"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry id="40" method="true" symbol="isScanning"/>
+        <entry field="true" id="72" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="10" object="true" symbol="UltrasonicApp"/>
+        <entry field="true" id="39" symbol="isCalypsoMini"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8391334" symbol="uuid"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="21" symbol="_view"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="38" method="true" symbol="getSensorData"/>
+        <entry field="true" id="27" symbol="&lt;globals/CalypsoModel/&lt;&gt;_CalypsoProfileDef&gt;"/>
+        <entry field="true" id="32" symbol="_config_next"/>
+        <entry field="true" id="22" symbol="CALYPSO_DATA_SERVICE"/>
+        <entry field="true" id="76" symbol="WindSpeed"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry field="true" id="56" symbol="_lineHeight_medium"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry field="true" id="67" symbol="f_cos"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389847" symbol="mesgType"/>
+        <entry field="true" id="55" symbol="_lineHeight_large"/>
+        <entry id="8391341" symbol="characteristics"/>
+        <entry field="true" id="24" symbol="HighDataRate"/>
+        <entry field="true" id="17" symbol="_controller"/>
+        <entry id="8388646" module="true" object="true" symbol="Timer"/>
+        <entry id="15" module="true" symbol="Layouts"/>
+        <entry id="8388636" module="true" symbol="Attention"/>
+        <entry field="true" id="66" symbol="_xpos"/>
+        <entry field="true" id="57" symbol="_lineHeight_small"/>
+        <entry id="8391260" method="true" symbol="onCharacteristicWrite"/>
+        <entry id="4" module="true" symbol="globals/Rez/Fonts"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="59" symbol="_rjust"/>
+        <entry id="36" method="true" symbol="configureCalypso"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435846" name="state" stackId="1" startPc="268435503"/>
+        <entry arg="true" endPc="268435947" name="state" stackId="1" startPc="268435891"/>
+        <entry arg="true" endPc="268436119" name="model" stackId="1" startPc="268436079"/>
+        <entry arg="true" endPc="268436119" name="app" stackId="2" startPc="268436079"/>
+        <entry arg="true" endPc="268436611" name="freq" stackId="1" startPc="268436575"/>
+        <entry arg="true" endPc="268436757" name="scanResults" stackId="1" startPc="268436612"/>
+        <entry endPc="268436756" name="result" stackId="2" startPc="268436636"/>
+        <entry endPc="268436740" name="name" stackId="3" startPc="268436636"/>
+        <entry arg="true" endPc="268436802" name="char" stackId="1" startPc="268436758"/>
+        <entry arg="true" endPc="268436802" name="value" stackId="2" startPc="268436758"/>
+        <entry arg="true" endPc="268436845" name="characteristic" stackId="1" startPc="268436803"/>
+        <entry arg="true" endPc="268436845" name="status" stackId="2" startPc="268436803"/>
+        <entry arg="true" endPc="268437063" name="device" stackId="1" startPc="268436846"/>
+        <entry arg="true" endPc="268437063" name="state" stackId="2" startPc="268436846"/>
+        <entry endPc="268436979" name="service" stackId="3" startPc="268436861"/>
+        <entry arg="true" endPc="268437094" name="scanState" stackId="1" startPc="268437064"/>
+        <entry arg="true" endPc="268437094" name="status" stackId="2" startPc="268437064"/>
+        <entry arg="true" endPc="268437590" name="stage" stackId="1" startPc="268437169"/>
+        <entry arg="true" endPc="268437603" name="b" stackId="1" startPc="268437591"/>
+        <entry arg="true" endPc="268438559" name="info" stackId="1" startPc="268438376"/>
+        <entry arg="true" endPc="268438874" name="dc" stackId="1" startPc="268438560"/>
+        <entry arg="true" endPc="268439335" name="model" stackId="1" startPc="268438875"/>
+        <entry arg="true" endPc="268439335" name="app" stackId="2" startPc="268438875"/>
+        <entry arg="true" endPc="268442987" name="dc" stackId="1" startPc="268439336"/>
+        <entry endPc="268442987" name="WS" stackId="2" startPc="268439340"/>
+        <entry endPc="268442987" name="VMG" stackId="3" startPc="268439340"/>
+        <entry endPc="268442987" name="NBD" stackId="4" startPc="268439340"/>
+        <entry endPc="268442987" name="_color" stackId="5" startPc="268439340"/>
+        <entry endPc="268442987" name="batt" stackId="6" startPc="268439340"/>
+        <entry endPc="268442987" name="roll" stackId="7" startPc="268439340"/>
+        <entry endPc="268442987" name="isScanning" stackId="8" startPc="268439340"/>
+        <entry endPc="268442987" name="scanResults" stackId="9" startPc="268439340"/>
+        <entry endPc="268440095" name="text" stackId="10" startPc="268439666"/>
+        <entry endPc="268440095" name="pts" stackId="11" startPc="268439666"/>
+        <entry endPc="268440614" name="ax" stackId="12" startPc="268440235"/>
+        <entry endPc="268440614" name="ay" stackId="13" startPc="268440235"/>
+        <entry endPc="268440614" name="rx" stackId="14" startPc="268440235"/>
+        <entry endPc="268440614" name="ry" stackId="15" startPc="268440235"/>
+        <entry endPc="268442828" name="i" stackId="16" startPc="268440846"/>
+        <entry endPc="268442828" name="sin" stackId="17" startPc="268440846"/>
+        <entry endPc="268442828" name="cos" stackId="18" startPc="268440846"/>
+        <entry endPc="268442828" name="j" stackId="19" startPc="268440846"/>
+        <entry endPc="268442828" name="sin_t" stackId="20" startPc="268440846"/>
+        <entry endPc="268442828" name="cos_t" stackId="21" startPc="268440846"/>
+        <entry endPc="268442828" name="k" stackId="22" startPc="268440846"/>
+        <entry endPc="268442828" name="sin_b" stackId="23" startPc="268440846"/>
+        <entry endPc="268442828" name="cos_b" stackId="24" startPc="268440846"/>
+        <entry endPc="268442828" name="r" stackId="25" startPc="268440846"/>
+        <entry endPc="268442828" name="delta_x" stackId="26" startPc="268440846"/>
+        <entry endPc="268442828" name="delta_y" stackId="27" startPc="268440846"/>
+    </localVars>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ultrasonic_label_AWS"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ultrasonic_label_TWA"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ultrasonic_graph_label_AWS"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ultrasonic_units_TWA"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ultrasonic_units_AWS"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Hz"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WindRose"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WindSpeed"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ultrasonic_label_AWA"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ultrasonic_graph_label_TWS"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ultrasonic_graph_label_AWA"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ultrasonic_units_TWS"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ultrasonic_label_TWS"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ultrasonic_units_AWA"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="WindUnit"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ultrasonic_graph_label_TWA"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="label"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Rez" offset="188" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/UltrasonicApp" offset="267" parentId="globals" symbolId="UltrasonicApp" type="class"/>
+        <dataEntry label="globals/UltrasonicController" offset="362" parentId="globals" symbolId="UltrasonicController" type="class"/>
+        <dataEntry label="globals/CalypsoModel" offset="457" parentId="globals" symbolId="CalypsoModel" type="class"/>
+        <dataEntry label="globals/UltrasonicView" offset="728" parentId="globals" symbolId="UltrasonicView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1055" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="1094" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="1125" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="1156" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1187" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="1362" parentId="Rez" symbolId="JsonData" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435483" name="&lt;init&gt;" parent="Rez" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435502" name="&lt;init&gt;" parent="UltrasonicApp" startPc="268435484">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435846" name="onStart" parent="UltrasonicApp" startPc="268435503">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435849" name="onPosition" parent="UltrasonicApp" startPc="268435847">
+            <param id="pos"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435869" name="getInitialView" parent="UltrasonicApp" startPc="268435850">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435890" name="initialize" parent="UltrasonicApp" startPc="268435870">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435947" name="onStop" parent="UltrasonicApp" startPc="268435891">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435966" name="&lt;init&gt;" parent="UltrasonicController" startPc="268435948">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435993" name="onStart" parent="UltrasonicController" startPc="268435967">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436078" name="getInitialView" parent="UltrasonicController" startPc="268435994">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436119" name="initialize" parent="UltrasonicController" startPc="268436079">
+            <param id="model"/>
+            <param id="app"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="UltrasonicController">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436495" name="&lt;init&gt;" parent="CalypsoModel" startPc="268436120">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436506" name="getSensorData" parent="CalypsoModel" startPc="268436496">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436533" name="registerProfiles" parent="CalypsoModel" startPc="268436507">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436557" name="onStart" parent="CalypsoModel" startPc="268436534">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436574" name="isScanning" parent="CalypsoModel" startPc="268436558">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436611" name="setDataRate" parent="CalypsoModel" startPc="268436575">
+            <param id="freq"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="CalypsoModel">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436757" name="onScanResults" parent="CalypsoModel" startPc="268436612">
+            <param id="scanResults"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436802" name="onCharacteristicChanged" parent="CalypsoModel" startPc="268436758">
+            <param id="char"/>
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436845" name="onCharacteristicWrite" parent="CalypsoModel" startPc="268436803">
+            <param id="characteristic"/>
+            <param id="status"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437063" name="onConnectedStateChanged" parent="CalypsoModel" startPc="268436846">
+            <param id="device"/>
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437094" name="onScanStateChange" parent="CalypsoModel" startPc="268437064">
+            <param id="scanState"/>
+            <param id="status"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437168" name="initialize" parent="CalypsoModel" startPc="268437095">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437590" name="configureCalypso" parent="CalypsoModel" startPc="268437169">
+            <param id="stage"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437603" name="enableOptSensors" parent="CalypsoModel" startPc="268437591">
+            <param id="b"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438375" name="&lt;init&gt;" parent="UltrasonicView" startPc="268437604">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438559" name="compute" parent="UltrasonicView" startPc="268438376">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438874" name="onLayout" parent="UltrasonicView" startPc="268438560">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439335" name="initialize" parent="UltrasonicView" startPc="268438875">
+            <param id="model"/>
+            <param id="app"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442987" name="onUpdate" parent="UltrasonicView" startPc="268439336">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

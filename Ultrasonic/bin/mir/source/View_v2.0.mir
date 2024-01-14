@@ -1,0 +1,1892 @@
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 1; ]
+import Toybox.Application;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 2; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 3; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 4; ]
+import Toybox.Math;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 5; ]
+using Toybox.FitContributor as :Fit;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 6; ]
+using Toybox.Activity as :Activity;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 8; @position = 4; ]
+var WIND_UNIT = "kt";
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 9; @position = 4; ]
+var WIND_FACTOR = 1.9438444924574;
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 11; ]
+class UltrasonicView extends WatchUi.DataField{
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 11; ]
+    <init> {
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 30 15 ]
+        %tmp.1 = newa 3;
+        %tmp.2 = 0;
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = 0;
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = 0;
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        putv self :field %tmp.10;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 49 15 ]
+        %tmp.11 = newa 12;
+        %tmp.12 = getm $.Toybox.Math;
+        %tmp.13 = getv function %tmp.12 :cos;
+        %tmp.14 = -60;
+        %tmp.15 = 57.2957;
+        %tmp.16 = div %tmp.14 %tmp.15;
+        %tmp.17 = invoke %tmp.12 %tmp.13(%tmp.16);
+        %tmp.18 = dup %tmp.11;
+        %tmp.19 = aputv %tmp.18 0 %tmp.17;
+        %tmp.20 = getm $.Toybox.Math;
+        %tmp.21 = getv function %tmp.20 :cos;
+        %tmp.22 = -30;
+        %tmp.23 = 57.2957;
+        %tmp.24 = div %tmp.22 %tmp.23;
+        %tmp.25 = invoke %tmp.20 %tmp.21(%tmp.24);
+        %tmp.26 = dup %tmp.19;
+        %tmp.27 = aputv %tmp.26 1 %tmp.25;
+        %tmp.28 = getm $.Toybox.Math;
+        %tmp.29 = getv function %tmp.28 :cos;
+        %tmp.30 = 0;
+        %tmp.31 = 57.2957;
+        %tmp.32 = div %tmp.30 %tmp.31;
+        %tmp.33 = invoke %tmp.28 %tmp.29(%tmp.32);
+        %tmp.34 = dup %tmp.27;
+        %tmp.35 = aputv %tmp.34 2 %tmp.33;
+        %tmp.36 = getm $.Toybox.Math;
+        %tmp.37 = getv function %tmp.36 :cos;
+        %tmp.38 = 30;
+        %tmp.39 = 57.2957;
+        %tmp.40 = div %tmp.38 %tmp.39;
+        %tmp.41 = invoke %tmp.36 %tmp.37(%tmp.40);
+        %tmp.42 = dup %tmp.35;
+        %tmp.43 = aputv %tmp.42 3 %tmp.41;
+        %tmp.44 = getm $.Toybox.Math;
+        %tmp.45 = getv function %tmp.44 :cos;
+        %tmp.46 = 60;
+        %tmp.47 = 57.2957;
+        %tmp.48 = div %tmp.46 %tmp.47;
+        %tmp.49 = invoke %tmp.44 %tmp.45(%tmp.48);
+        %tmp.50 = dup %tmp.43;
+        %tmp.51 = aputv %tmp.50 4 %tmp.49;
+        %tmp.52 = getm $.Toybox.Math;
+        %tmp.53 = getv function %tmp.52 :cos;
+        %tmp.54 = 90;
+        %tmp.55 = 57.2957;
+        %tmp.56 = div %tmp.54 %tmp.55;
+        %tmp.57 = invoke %tmp.52 %tmp.53(%tmp.56);
+        %tmp.58 = dup %tmp.51;
+        %tmp.59 = aputv %tmp.58 5 %tmp.57;
+        %tmp.60 = getm $.Toybox.Math;
+        %tmp.61 = getv function %tmp.60 :cos;
+        %tmp.62 = 120;
+        %tmp.63 = 57.2957;
+        %tmp.64 = div %tmp.62 %tmp.63;
+        %tmp.65 = invoke %tmp.60 %tmp.61(%tmp.64);
+        %tmp.66 = dup %tmp.59;
+        %tmp.67 = aputv %tmp.66 6 %tmp.65;
+        %tmp.68 = getm $.Toybox.Math;
+        %tmp.69 = getv function %tmp.68 :cos;
+        %tmp.70 = 150;
+        %tmp.71 = 57.2957;
+        %tmp.72 = div %tmp.70 %tmp.71;
+        %tmp.73 = invoke %tmp.68 %tmp.69(%tmp.72);
+        %tmp.74 = dup %tmp.67;
+        %tmp.75 = aputv %tmp.74 7 %tmp.73;
+        %tmp.76 = getm $.Toybox.Math;
+        %tmp.77 = getv function %tmp.76 :cos;
+        %tmp.78 = 180;
+        %tmp.79 = 57.2957;
+        %tmp.80 = div %tmp.78 %tmp.79;
+        %tmp.81 = invoke %tmp.76 %tmp.77(%tmp.80);
+        %tmp.82 = dup %tmp.75;
+        %tmp.83 = aputv %tmp.82 8 %tmp.81;
+        %tmp.84 = getm $.Toybox.Math;
+        %tmp.85 = getv function %tmp.84 :cos;
+        %tmp.86 = 210;
+        %tmp.87 = 57.2957;
+        %tmp.88 = div %tmp.86 %tmp.87;
+        %tmp.89 = invoke %tmp.84 %tmp.85(%tmp.88);
+        %tmp.90 = dup %tmp.83;
+        %tmp.91 = aputv %tmp.90 9 %tmp.89;
+        %tmp.92 = getm $.Toybox.Math;
+        %tmp.93 = getv function %tmp.92 :cos;
+        %tmp.94 = 240;
+        %tmp.95 = 57.2957;
+        %tmp.96 = div %tmp.94 %tmp.95;
+        %tmp.97 = invoke %tmp.92 %tmp.93(%tmp.96);
+        %tmp.98 = dup %tmp.91;
+        %tmp.99 = aputv %tmp.98 10 %tmp.97;
+        %tmp.100 = getm $.Toybox.Math;
+        %tmp.101 = getv function %tmp.100 :cos;
+        %tmp.102 = 270;
+        %tmp.103 = 57.2957;
+        %tmp.104 = div %tmp.102 %tmp.103;
+        %tmp.105 = invoke %tmp.100 %tmp.101(%tmp.104);
+        %tmp.106 = dup %tmp.99;
+        %tmp.107 = aputv %tmp.106 11 %tmp.105;
+        putv self :f_cos %tmp.107;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 61 15 ]
+        %tmp.108 = newa 12;
+        %tmp.109 = getm $.Toybox.Math;
+        %tmp.110 = getv function %tmp.109 :sin;
+        %tmp.111 = -60;
+        %tmp.112 = 57.2957;
+        %tmp.113 = div %tmp.111 %tmp.112;
+        %tmp.114 = invoke %tmp.109 %tmp.110(%tmp.113);
+        %tmp.115 = dup %tmp.108;
+        %tmp.116 = aputv %tmp.115 0 %tmp.114;
+        %tmp.117 = getm $.Toybox.Math;
+        %tmp.118 = getv function %tmp.117 :sin;
+        %tmp.119 = -30;
+        %tmp.120 = 57.2957;
+        %tmp.121 = div %tmp.119 %tmp.120;
+        %tmp.122 = invoke %tmp.117 %tmp.118(%tmp.121);
+        %tmp.123 = dup %tmp.116;
+        %tmp.124 = aputv %tmp.123 1 %tmp.122;
+        %tmp.125 = getm $.Toybox.Math;
+        %tmp.126 = getv function %tmp.125 :sin;
+        %tmp.127 = 0;
+        %tmp.128 = 57.2957;
+        %tmp.129 = div %tmp.127 %tmp.128;
+        %tmp.130 = invoke %tmp.125 %tmp.126(%tmp.129);
+        %tmp.131 = dup %tmp.124;
+        %tmp.132 = aputv %tmp.131 2 %tmp.130;
+        %tmp.133 = getm $.Toybox.Math;
+        %tmp.134 = getv function %tmp.133 :sin;
+        %tmp.135 = 30;
+        %tmp.136 = 57.2957;
+        %tmp.137 = div %tmp.135 %tmp.136;
+        %tmp.138 = invoke %tmp.133 %tmp.134(%tmp.137);
+        %tmp.139 = dup %tmp.132;
+        %tmp.140 = aputv %tmp.139 3 %tmp.138;
+        %tmp.141 = getm $.Toybox.Math;
+        %tmp.142 = getv function %tmp.141 :sin;
+        %tmp.143 = 60;
+        %tmp.144 = 57.2957;
+        %tmp.145 = div %tmp.143 %tmp.144;
+        %tmp.146 = invoke %tmp.141 %tmp.142(%tmp.145);
+        %tmp.147 = dup %tmp.140;
+        %tmp.148 = aputv %tmp.147 4 %tmp.146;
+        %tmp.149 = getm $.Toybox.Math;
+        %tmp.150 = getv function %tmp.149 :sin;
+        %tmp.151 = 90;
+        %tmp.152 = 57.2957;
+        %tmp.153 = div %tmp.151 %tmp.152;
+        %tmp.154 = invoke %tmp.149 %tmp.150(%tmp.153);
+        %tmp.155 = dup %tmp.148;
+        %tmp.156 = aputv %tmp.155 5 %tmp.154;
+        %tmp.157 = getm $.Toybox.Math;
+        %tmp.158 = getv function %tmp.157 :sin;
+        %tmp.159 = 120;
+        %tmp.160 = 57.2957;
+        %tmp.161 = div %tmp.159 %tmp.160;
+        %tmp.162 = invoke %tmp.157 %tmp.158(%tmp.161);
+        %tmp.163 = dup %tmp.156;
+        %tmp.164 = aputv %tmp.163 6 %tmp.162;
+        %tmp.165 = getm $.Toybox.Math;
+        %tmp.166 = getv function %tmp.165 :sin;
+        %tmp.167 = 150;
+        %tmp.168 = 57.2957;
+        %tmp.169 = div %tmp.167 %tmp.168;
+        %tmp.170 = invoke %tmp.165 %tmp.166(%tmp.169);
+        %tmp.171 = dup %tmp.164;
+        %tmp.172 = aputv %tmp.171 7 %tmp.170;
+        %tmp.173 = getm $.Toybox.Math;
+        %tmp.174 = getv function %tmp.173 :sin;
+        %tmp.175 = 180;
+        %tmp.176 = 57.2957;
+        %tmp.177 = div %tmp.175 %tmp.176;
+        %tmp.178 = invoke %tmp.173 %tmp.174(%tmp.177);
+        %tmp.179 = dup %tmp.172;
+        %tmp.180 = aputv %tmp.179 8 %tmp.178;
+        %tmp.181 = getm $.Toybox.Math;
+        %tmp.182 = getv function %tmp.181 :sin;
+        %tmp.183 = 210;
+        %tmp.184 = 57.2957;
+        %tmp.185 = div %tmp.183 %tmp.184;
+        %tmp.186 = invoke %tmp.181 %tmp.182(%tmp.185);
+        %tmp.187 = dup %tmp.180;
+        %tmp.188 = aputv %tmp.187 9 %tmp.186;
+        %tmp.189 = getm $.Toybox.Math;
+        %tmp.190 = getv function %tmp.189 :sin;
+        %tmp.191 = 240;
+        %tmp.192 = 57.2957;
+        %tmp.193 = div %tmp.191 %tmp.192;
+        %tmp.194 = invoke %tmp.189 %tmp.190(%tmp.193);
+        %tmp.195 = dup %tmp.188;
+        %tmp.196 = aputv %tmp.195 10 %tmp.194;
+        %tmp.197 = getm $.Toybox.Math;
+        %tmp.198 = getv function %tmp.197 :sin;
+        %tmp.199 = 270;
+        %tmp.200 = 57.2957;
+        %tmp.201 = div %tmp.199 %tmp.200;
+        %tmp.202 = invoke %tmp.197 %tmp.198(%tmp.201);
+        %tmp.203 = dup %tmp.196;
+        %tmp.204 = aputv %tmp.203 11 %tmp.202;
+        putv self :f_sin %tmp.204;
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 11; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 13; @position = 12; ]
+    protected
+    var _model;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 14; @position = 12; ]
+    protected
+    var _app;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 15; @position = 15; ]
+    protected
+    var _xpos;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 16; @position = 15; ]
+    protected
+    var _font;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 17; @position = 12; ]
+    protected
+    var _font_small;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 18; @position = 15; ]
+    protected
+    var _font_medium;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 19; @position = 15; ]
+    protected
+    var _font_large;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 20; @position = 15; ]
+    protected
+    var _ljust;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 21; @position = 15; ]
+    protected
+    var _rjust;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 22; @position = 15; ]
+    protected
+    var _cjust;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 23; @position = 12; ]
+    protected
+    var _lineHeight_small;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 24; @position = 15; ]
+    protected
+    var _lineHeight;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 25; @position = 15; ]
+    protected
+    var _lineHeight_medium;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 26; @position = 15; ]
+    protected
+    var _lineHeight_large;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 27; @position = 15; ]
+    protected
+    var _viewHeight;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 28; @position = 15; ]
+    protected
+    var _viewWidth;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 30; @position = 15; ]
+    protected
+    var field;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 32; @position = 15; ]
+    protected
+    var count = 0;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 33; @position = 12; ]
+    protected
+    var x0;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 34; @position = 15; ]
+    protected
+    var y0;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 36; @position = 15; ]
+    protected
+    var _ultrasonicFitField_TWS;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 37; @position = 15; ]
+    protected
+    var _ultrasonicFitField_TWA;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 38; @position = 15; ]
+    protected
+    var _ultrasonicFitField_AWS;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 39; @position = 15; ]
+    protected
+    var _ultrasonicFitField_AWA;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 41; @position = 15; ]
+    protected
+    var SOG = 0;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 42; @position = 15; ]
+    protected
+    var COG = 0;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 43; @position = 15; ]
+    protected
+    var TWS = 0;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 44; @position = 15; ]
+    protected
+    var TWD = 0;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 45; @position = 15; ]
+    protected
+    var AWS = 0;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 46; @position = 12; ]
+    protected
+    var AWD = 0;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 49; @position = 15; ]
+    protected
+    var f_cos;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 61; @position = 15; ]
+    protected
+    var f_sin;
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 75; ]
+    function initialize(model, app) as Void {
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_75_36_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 76 8 ]
+        %tmp.2 = getv ? :DataField;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 77 8 ]
+        %tmp.5 = lgetv %model;
+        putv self :_model %tmp.5;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 78 8 ]
+        %tmp.7 = lgetv %app;
+        putv self :_app %tmp.7;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 81 2 ]
+        %tmp.8 = self;
+        %tmp.9 = getv function %tmp.8 :createField;
+        %tmp.10 = "TWS";
+        %tmp.11 = 0;
+        %tmp.12 = getm $.Toybox.FitContributor;
+        %tmp.13 = getv %tmp.12 :DATA_TYPE_FLOAT;
+        %tmp.14 = newd 2;
+        %tmp.16 = const :mesgType;
+        %tmp.18 = getv ? :FitContributor;
+        %tmp.19 = getv %tmp.18 :MESG_TYPE_RECORD;
+        %tmp.20 = dup %tmp.14;
+        %tmp.21 = aputv %tmp.20 %tmp.16 %tmp.19;
+        %tmp.23 = const :units;
+        %tmp.25 = getv ? :WIND_UNIT;
+        %tmp.26 = dup %tmp.21;
+        %tmp.27 = aputv %tmp.26 %tmp.23 %tmp.25;
+        %tmp.28 = invoke %tmp.8 %tmp.9(%tmp.10, %tmp.11, %tmp.13, %tmp.27);
+        putv self :_ultrasonicFitField_TWS %tmp.28;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 82 2 ]
+        %tmp.29 = self;
+        %tmp.30 = getv function %tmp.29 :createField;
+        %tmp.31 = "TWA";
+        %tmp.32 = 1;
+        %tmp.33 = getm $.Toybox.FitContributor;
+        %tmp.34 = getv %tmp.33 :DATA_TYPE_FLOAT;
+        %tmp.35 = newd 2;
+        %tmp.37 = const :mesgType;
+        %tmp.39 = getv ? :FitContributor;
+        %tmp.40 = getv %tmp.39 :MESG_TYPE_RECORD;
+        %tmp.41 = dup %tmp.35;
+        %tmp.42 = aputv %tmp.41 %tmp.37 %tmp.40;
+        %tmp.44 = const :units;
+        %tmp.45 = "degree";
+        %tmp.46 = dup %tmp.42;
+        %tmp.47 = aputv %tmp.46 %tmp.44 %tmp.45;
+        %tmp.48 = invoke %tmp.29 %tmp.30(%tmp.31, %tmp.32, %tmp.34, %tmp.47);
+        putv self :_ultrasonicFitField_TWA %tmp.48;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 83 5 ]
+        %tmp.49 = self;
+        %tmp.50 = getv function %tmp.49 :createField;
+        %tmp.51 = "AWS";
+        %tmp.52 = 2;
+        %tmp.53 = getm $.Toybox.FitContributor;
+        %tmp.54 = getv %tmp.53 :DATA_TYPE_FLOAT;
+        %tmp.55 = newd 2;
+        %tmp.57 = const :mesgType;
+        %tmp.59 = getv ? :FitContributor;
+        %tmp.60 = getv %tmp.59 :MESG_TYPE_RECORD;
+        %tmp.61 = dup %tmp.55;
+        %tmp.62 = aputv %tmp.61 %tmp.57 %tmp.60;
+        %tmp.64 = const :units;
+        %tmp.66 = getv ? :WIND_UNIT;
+        %tmp.67 = dup %tmp.62;
+        %tmp.68 = aputv %tmp.67 %tmp.64 %tmp.66;
+        %tmp.69 = invoke %tmp.49 %tmp.50(%tmp.51, %tmp.52, %tmp.54, %tmp.68);
+        putv self :_ultrasonicFitField_AWS %tmp.69;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 84 2 ]
+        %tmp.70 = self;
+        %tmp.71 = getv function %tmp.70 :createField;
+        %tmp.72 = "AWA";
+        %tmp.73 = 3;
+        %tmp.74 = getm $.Toybox.FitContributor;
+        %tmp.75 = getv %tmp.74 :DATA_TYPE_FLOAT;
+        %tmp.76 = newd 2;
+        %tmp.78 = const :mesgType;
+        %tmp.80 = getv ? :FitContributor;
+        %tmp.81 = getv %tmp.80 :MESG_TYPE_RECORD;
+        %tmp.82 = dup %tmp.76;
+        %tmp.83 = aputv %tmp.82 %tmp.78 %tmp.81;
+        %tmp.85 = const :units;
+        %tmp.86 = "degree";
+        %tmp.87 = dup %tmp.83;
+        %tmp.88 = aputv %tmp.87 %tmp.85 %tmp.86;
+        %tmp.89 = invoke %tmp.70 %tmp.71(%tmp.72, %tmp.73, %tmp.75, %tmp.88);
+        putv self :_ultrasonicFitField_AWA %tmp.89;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 87 8 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_87_8_if_stmt:
+        %tmp.90 = lgetv %app;
+        %tmp.91 = getv %tmp.90 :Properties;
+        %tmp.92 = getv function %tmp.91 :getValue;
+        %tmp.93 = "WindRose";
+        %tmp.94 = invoke %tmp.91 %tmp.92(%tmp.93);
+        %tmp.95 = true;
+        %tmp.96 = eq %tmp.94 %tmp.95;
+        bf %tmp.96 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_87_8_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_87_8_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_87_58_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 87 60 ]
+        %tmp.97 = getv self :field;
+        %tmp.98 = 1;
+        %tmp.99 = 0;
+        aputv %tmp.97 %tmp.99 %tmp.98;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_87_58_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_87_8_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_87_8_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 88 2 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_88_2_if_stmt:
+        %tmp.100 = lgetv %app;
+        %tmp.101 = getv %tmp.100 :Properties;
+        %tmp.102 = getv function %tmp.101 :getValue;
+        %tmp.103 = "WindSpeed";
+        %tmp.104 = invoke %tmp.101 %tmp.102(%tmp.103);
+        %tmp.105 = true;
+        %tmp.106 = eq %tmp.104 %tmp.105;
+        bf %tmp.106 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_88_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_88_2_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_88_52_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 88 54 ]
+        %tmp.107 = getv self :field;
+        %tmp.108 = 1;
+        %tmp.109 = 1;
+        aputv %tmp.107 %tmp.109 %tmp.108;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_88_52_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_88_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_88_2_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 89 2 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_89_2_if_stmt:
+        %tmp.110 = lgetv %app;
+        %tmp.111 = getv %tmp.110 :Properties;
+        %tmp.112 = getv function %tmp.111 :getValue;
+        %tmp.113 = "WindUnit";
+        %tmp.114 = invoke %tmp.111 %tmp.112(%tmp.113);
+        %tmp.115 = true;
+        %tmp.116 = eq %tmp.114 %tmp.115;
+        bf %tmp.116 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_89_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_89_2_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_89_52_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 89 54 ]
+        %tmp.117 = getv self :field;
+        %tmp.118 = 1;
+        %tmp.119 = 2;
+        aputv %tmp.117 %tmp.119 %tmp.118;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_89_52_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_89_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_89_2_if_end:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_75_36_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 93; ]
+    function onLayout(dc as Dc) {
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_93_32_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 95 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 3;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        putv self :_xpos %tmp.5;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 96 2 ]
+        %tmp.6 = lgetv %dc;
+        %tmp.7 = getv function %tmp.6 :getWidth;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        putv self :x0 %tmp.10;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 97 8 ]
+        %tmp.11 = lgetv %dc;
+        %tmp.12 = getv function %tmp.11 :getHeight;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        %tmp.14 = 2;
+        %tmp.15 = div %tmp.13 %tmp.14;
+        putv self :y0 %tmp.15;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 99 8 ]
+        %tmp.16 = getm $.Toybox.Graphics;
+        %tmp.17 = getv %tmp.16 :FONT_SYSTEM_XTINY;
+        putv self :_font %tmp.17;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 100 8 ]
+        %tmp.18 = lgetv %dc;
+        %tmp.19 = getv function %tmp.18 :getFontHeight;
+        %tmp.21 = getv ? :_font;
+        %tmp.22 = invoke %tmp.18 %tmp.19(%tmp.21);
+        putv self :_lineHeight %tmp.22;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 102 2 ]
+        %tmp.23 = getm $.Toybox.Graphics;
+        %tmp.24 = getv %tmp.23 :FONT_SMALL;
+        putv self :_font_small %tmp.24;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 103 2 ]
+        %tmp.25 = lgetv %dc;
+        %tmp.26 = getv function %tmp.25 :getFontHeight;
+        %tmp.28 = getv ? :_font_small;
+        %tmp.29 = invoke %tmp.25 %tmp.26(%tmp.28);
+        putv self :_lineHeight_small %tmp.29;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 105 8 ]
+        %tmp.30 = getm $.Toybox.Graphics;
+        %tmp.31 = getv %tmp.30 :FONT_NUMBER_MILD;
+        putv self :_font_medium %tmp.31;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 106 8 ]
+        %tmp.32 = lgetv %dc;
+        %tmp.33 = getv function %tmp.32 :getFontHeight;
+        %tmp.35 = getv ? :_font_medium;
+        %tmp.36 = invoke %tmp.32 %tmp.33(%tmp.35);
+        putv self :_lineHeight_medium %tmp.36;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 108 8 ]
+        %tmp.37 = getm $.Toybox.Graphics;
+        %tmp.38 = getv %tmp.37 :FONT_NUMBER_THAI_HOT;
+        putv self :_font_large %tmp.38;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 109 8 ]
+        %tmp.39 = lgetv %dc;
+        %tmp.40 = getv function %tmp.39 :getFontHeight;
+        %tmp.42 = getv ? :_font_large;
+        %tmp.43 = invoke %tmp.39 %tmp.40(%tmp.42);
+        putv self :_lineHeight_large %tmp.43;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 111 8 ]
+        %tmp.44 = getm $.Toybox.Graphics;
+        %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_LEFT;
+        putv self :_ljust %tmp.45;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 112 8 ]
+        %tmp.46 = getm $.Toybox.Graphics;
+        %tmp.47 = getv %tmp.46 :TEXT_JUSTIFY_RIGHT;
+        putv self :_rjust %tmp.47;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 113 8 ]
+        %tmp.48 = getm $.Toybox.Graphics;
+        %tmp.49 = getv %tmp.48 :TEXT_JUSTIFY_CENTER;
+        putv self :_cjust %tmp.49;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 115 8 ]
+        %tmp.50 = lgetv %dc;
+        %tmp.51 = getv function %tmp.50 :getHeight;
+        %tmp.52 = invoke %tmp.50 %tmp.51();
+        putv self :_viewHeight %tmp.52;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 116 8 ]
+        %tmp.53 = lgetv %dc;
+        %tmp.54 = getv function %tmp.53 :getWidth;
+        %tmp.55 = invoke %tmp.53 %tmp.54();
+        putv self :_viewWidth %tmp.55;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_93_32_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 121; ]
+    function onUpdate(dc as Dc) as Void {
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 122 2 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_stop" ]
+        %WS.1 = local;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 123 2 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_stop" ]
+        %VMG.2 = local;
+        %tmp.1 = 0;
+        lputv %VMG.2 %tmp.1;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 124 2 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_stop" ]
+        %NBD.3 = local;
+        %tmp.2 = 0;
+        lputv %NBD.3 %tmp.2;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 126 2 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_stop" ]
+        %_color.4 = local;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 128 2 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_stop" ]
+        %batt.5 = local;
+        %tmp.3 = 0;
+        lputv %batt.5 %tmp.3;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 130 2 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_stop" ]
+        %roll.6 = local;
+        %tmp.4 = null;
+        lputv %roll.6 %tmp.4;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 138 2 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_138_2_if_stmt:
+        %tmp.5 = lgetv %self;
+        %tmp.6 = getv function %tmp.5 :getBackgroundColor;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = getm $.Toybox.Graphics;
+        %tmp.9 = getv %tmp.8 :COLOR_BLACK;
+        %tmp.10 = eq %tmp.7 %tmp.9;
+        bf %tmp.10 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_138_2_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_138_2_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_138_57_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 139 3 ]
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_WHITE;
+        lputv %_color.4 %tmp.12;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 140 3 ]
+        %tmp.13 = lgetv %dc;
+        %tmp.14 = getv function %tmp.13 :setColor;
+        %tmp.15 = getm $.Toybox.Graphics;
+        %tmp.16 = getv %tmp.15 :COLOR_BLACK;
+        %tmp.17 = getm $.Toybox.Graphics;
+        %tmp.18 = getv %tmp.17 :COLOR_BLACK;
+        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_138_57_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_138_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_138_2_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_141_9_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 142 3 ]
+        %tmp.19 = getm $.Toybox.Graphics;
+        %tmp.20 = getv %tmp.19 :COLOR_BLACK;
+        lputv %_color.4 %tmp.20;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 143 3 ]
+        %tmp.21 = lgetv %dc;
+        %tmp.22 = getv function %tmp.21 :setColor;
+        %tmp.23 = getm $.Toybox.Graphics;
+        %tmp.24 = getv %tmp.23 :COLOR_WHITE;
+        %tmp.25 = getm $.Toybox.Graphics;
+        %tmp.26 = getv %tmp.25 :COLOR_WHITE;
+        invoke %tmp.21 %tmp.22(%tmp.24, %tmp.26);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_141_9_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_138_2_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 146 2 ]
+        %tmp.27 = lgetv %dc;
+        %tmp.28 = getv function %tmp.27 :clear;
+        invoke %tmp.27 %tmp.28();
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 149 2 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_stop" ]
+        %isScanning.7 = local;
+        %tmp.30 = getv ? :_model;
+        %tmp.31 = getv function %tmp.30 :isScanning;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        lputv %isScanning.7 %tmp.32;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 150 2 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_stop" ]
+        %scanResults.8 = local;
+        %tmp.34 = getv ? :_model;
+        %tmp.35 = getv function %tmp.34 :getSensorData;
+        %tmp.36 = invoke %tmp.34 %tmp.35();
+        lputv %scanResults.8 %tmp.36;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 154 3 ]
+        %tmp.37 = newa 10;
+        %tmp.38 = 582;
+        %tmp.39 = dup %tmp.37;
+        %tmp.40 = aputv %tmp.39 0 %tmp.38;
+        %tmp.41 = 0;
+        %tmp.42 = dup %tmp.40;
+        %tmp.43 = aputv %tmp.42 1 %tmp.41;
+        %tmp.44 = 48;
+        %tmp.45 = dup %tmp.43;
+        %tmp.46 = aputv %tmp.45 2 %tmp.44;
+        %tmp.47 = 0;
+        %tmp.48 = dup %tmp.46;
+        %tmp.49 = aputv %tmp.48 3 %tmp.47;
+        %tmp.50 = 10;
+        %tmp.51 = dup %tmp.49;
+        %tmp.52 = aputv %tmp.51 4 %tmp.50;
+        %tmp.53 = 131;
+        %tmp.54 = dup %tmp.52;
+        %tmp.55 = aputv %tmp.54 5 %tmp.53;
+        %tmp.56 = 136;
+        %tmp.57 = dup %tmp.55;
+        %tmp.58 = aputv %tmp.57 6 %tmp.56;
+        %tmp.59 = 0;
+        %tmp.60 = dup %tmp.58;
+        %tmp.61 = aputv %tmp.60 7 %tmp.59;
+        %tmp.62 = 0;
+        %tmp.63 = dup %tmp.61;
+        %tmp.64 = aputv %tmp.63 8 %tmp.62;
+        %tmp.65 = 0;
+        %tmp.66 = dup %tmp.64;
+        %tmp.67 = aputv %tmp.66 9 %tmp.65;
+        lputv %scanResults.8 %tmp.67;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 155 3 ]
+        %tmp.68 = 3;
+        putv self :SOG %tmp.68;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 159 2 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_159_2_if_stmt:
+        %tmp.69 = lgetv %scanResults.8;
+        %tmp.70 = getv function %tmp.69 :size;
+        %tmp.71 = invoke %tmp.69 %tmp.70();
+        %tmp.72 = 0;
+        %tmp.73 = eq %tmp.71 %tmp.72;
+        bf %tmp.73 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_159_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_159_2_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_159_31_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 160 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_159_31_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_159_31_stop" ]
+        %text.9 = local;
+        %tmp.74 = "connecting...";
+        lputv %text.9 %tmp.74;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 162 3 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_162_3_if_stmt:
+        %tmp.76 = lgetv %isScanning.7;
+        %tmp.77 = true;
+        %tmp.78 = eq %tmp.76 %tmp.77;
+        bf %tmp.78 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_162_3_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_162_3_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_162_27_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 163 4 ]
+        %tmp.79 = "searching...";
+        lputv %text.9 %tmp.79;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_162_27_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_162_3_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_162_3_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 167 3 ]
+        %tmp.80 = lgetv %dc;
+        %tmp.81 = getv function %tmp.80 :setColor;
+        %tmp.82 = 0x2770CA;
+        %tmp.83 = getm $.Toybox.Graphics;
+        %tmp.84 = getv %tmp.83 :COLOR_TRANSPARENT;
+        invoke %tmp.80 %tmp.81(%tmp.82, %tmp.84);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 168 3 ]
+        %tmp.85 = lgetv %dc;
+        %tmp.86 = getv function %tmp.85 :setPenWidth;
+        %tmp.87 = 3;
+        invoke %tmp.85 %tmp.86(%tmp.87);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 169 3 ]
+        %tmp.88 = lgetv %dc;
+        %tmp.89 = getv function %tmp.88 :drawRectangle;
+        %tmp.91 = getv ? :_viewWidth;
+        %tmp.92 = 0.37;
+        %tmp.93 = mul %tmp.91 %tmp.92;
+        %tmp.95 = getv ? :_viewHeight;
+        %tmp.96 = 0.37;
+        %tmp.97 = mul %tmp.95 %tmp.96;
+        %tmp.99 = getv ? :_viewWidth;
+        %tmp.100 = 0.26;
+        %tmp.101 = mul %tmp.99 %tmp.100;
+        %tmp.103 = getv ? :_viewHeight;
+        %tmp.104 = 0.26;
+        %tmp.105 = mul %tmp.103 %tmp.104;
+        invoke %tmp.88 %tmp.89(%tmp.93, %tmp.97, %tmp.101, %tmp.105);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 170 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_159_31_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_159_31_stop" ]
+        %pts.10 = local;
+        %tmp.106 = newa 3;
+        %tmp.107 = newa 2;
+        %tmp.109 = getv ? :_viewWidth;
+        %tmp.110 = 0.5;
+        %tmp.111 = mul %tmp.109 %tmp.110;
+        %tmp.112 = dup %tmp.107;
+        %tmp.113 = aputv %tmp.112 0 %tmp.111;
+        %tmp.115 = getv ? :_viewHeight;
+        %tmp.116 = 0.5;
+        %tmp.117 = mul %tmp.115 %tmp.116;
+        %tmp.118 = 1;
+        %tmp.119 = sub %tmp.117 %tmp.118;
+        %tmp.120 = dup %tmp.113;
+        %tmp.121 = aputv %tmp.120 1 %tmp.119;
+        %tmp.122 = dup %tmp.106;
+        %tmp.123 = aputv %tmp.122 0 %tmp.121;
+        %tmp.124 = newa 2;
+        %tmp.126 = getv ? :_viewWidth;
+        %tmp.127 = 0.37;
+        %tmp.128 = mul %tmp.126 %tmp.127;
+        %tmp.129 = 6;
+        %tmp.130 = add %tmp.128 %tmp.129;
+        %tmp.131 = dup %tmp.124;
+        %tmp.132 = aputv %tmp.131 0 %tmp.130;
+        %tmp.134 = getv ? :_viewHeight;
+        %tmp.135 = 0.63;
+        %tmp.136 = mul %tmp.134 %tmp.135;
+        %tmp.137 = 6;
+        %tmp.138 = sub %tmp.136 %tmp.137;
+        %tmp.139 = dup %tmp.132;
+        %tmp.140 = aputv %tmp.139 1 %tmp.138;
+        %tmp.141 = dup %tmp.123;
+        %tmp.142 = aputv %tmp.141 1 %tmp.140;
+        %tmp.143 = newa 2;
+        %tmp.145 = getv ? :_viewWidth;
+        %tmp.146 = 0.63;
+        %tmp.147 = mul %tmp.145 %tmp.146;
+        %tmp.148 = 6;
+        %tmp.149 = sub %tmp.147 %tmp.148;
+        %tmp.150 = dup %tmp.143;
+        %tmp.151 = aputv %tmp.150 0 %tmp.149;
+        %tmp.153 = getv ? :_viewHeight;
+        %tmp.154 = 0.63;
+        %tmp.155 = mul %tmp.153 %tmp.154;
+        %tmp.156 = 6;
+        %tmp.157 = sub %tmp.155 %tmp.156;
+        %tmp.158 = dup %tmp.151;
+        %tmp.159 = aputv %tmp.158 1 %tmp.157;
+        %tmp.160 = dup %tmp.142;
+        %tmp.161 = aputv %tmp.160 2 %tmp.159;
+        lputv %pts.10 %tmp.161;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 173 3 ]
+        %tmp.162 = lgetv %dc;
+        %tmp.163 = getv function %tmp.162 :fillPolygon;
+        %tmp.165 = lgetv %pts.10;
+        invoke %tmp.162 %tmp.163(%tmp.165);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 176 3 ]
+        %tmp.166 = lgetv %dc;
+        %tmp.167 = getv function %tmp.166 :setColor;
+        %tmp.169 = lgetv %_color.4;
+        %tmp.170 = getm $.Toybox.Graphics;
+        %tmp.171 = getv %tmp.170 :COLOR_TRANSPARENT;
+        invoke %tmp.166 %tmp.167(%tmp.169, %tmp.171);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 177 3 ]
+        %tmp.172 = lgetv %dc;
+        %tmp.173 = getv function %tmp.172 :drawText;
+        %tmp.175 = getv ? :x0;
+        %tmp.177 = getv ? :_viewHeight;
+        %tmp.178 = 0.7;
+        %tmp.179 = mul %tmp.177 %tmp.178;
+        %tmp.181 = getv ? :_font;
+        %tmp.183 = lgetv %text.9;
+        %tmp.185 = getv ? :_cjust;
+        invoke %tmp.172 %tmp.173(%tmp.175, %tmp.179, %tmp.181, %tmp.183, %tmp.185);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 178 3 ]
+        ret ?;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_159_31_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_159_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_159_2_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 182 2 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_182_2_if_stmt:
+        %tmp.186 = lgetv %scanResults.8;
+        %tmp.187 = getv function %tmp.186 :size;
+        %tmp.188 = invoke %tmp.186 %tmp.187();
+        %tmp.189 = 10;
+        %tmp.190 = eq %tmp.188 %tmp.189;
+        bf %tmp.190 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_182_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_182_2_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_182_32_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 183 9 ]
+        %tmp.192 = lgetv %scanResults.8;
+        %tmp.193 = 1;
+        %tmp.194 = agetv %tmp.192 %tmp.193;
+        %tmp.195 = 8;
+        %tmp.196 = shl %tmp.194 %tmp.195;
+        %tmp.198 = lgetv %scanResults.8;
+        %tmp.199 = 0;
+        %tmp.200 = agetv %tmp.198 %tmp.199;
+        %tmp.201 = bitor %tmp.196 %tmp.200;
+        %tmp.202 = 0.01;
+        %tmp.203 = mul %tmp.201 %tmp.202;
+        putv self :AWS %tmp.203;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 184 3 ]
+        %tmp.205 = lgetv %scanResults.8;
+        %tmp.206 = 3;
+        %tmp.207 = agetv %tmp.205 %tmp.206;
+        %tmp.208 = 8;
+        %tmp.209 = shl %tmp.207 %tmp.208;
+        %tmp.211 = lgetv %scanResults.8;
+        %tmp.212 = 2;
+        %tmp.213 = agetv %tmp.211 %tmp.212;
+        %tmp.214 = bitor %tmp.209 %tmp.213;
+        putv self :AWD %tmp.214;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 185 3 ]
+        %tmp.216 = lgetv %scanResults.8;
+        %tmp.217 = 4;
+        %tmp.218 = agetv %tmp.216 %tmp.217;
+        lputv %batt.5 %tmp.218;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 187 3 ]
+        %tmp.220 = lgetv %scanResults.8;
+        %tmp.221 = 6;
+        %tmp.222 = agetv %tmp.220 %tmp.221;
+        %tmp.223 = 90;
+        %tmp.224 = sub %tmp.222 %tmp.223;
+        lputv %roll.6 %tmp.224;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_182_32_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_182_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_182_2_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 197 2 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_2_if_stmt:
+        %tmp.226 = getv ? :SOG;
+        %tmp.227 = 0;
+        %tmp.228 = ne %tmp.226 %tmp.227;
+        bf %tmp.228 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_2_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_2_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_16_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 199 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_16_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_16_stop" ]
+        %ax.11 = local;
+        %tmp.230 = getv ? :AWS;
+        %tmp.231 = getm $.Toybox.Math;
+        %tmp.232 = getv function %tmp.231 :cos;
+        %tmp.233 = -1;
+        %tmp.235 = getv ? :AWD;
+        %tmp.236 = mul %tmp.233 %tmp.235;
+        %tmp.237 = getm $.Toybox.Math;
+        %tmp.238 = getv %tmp.237 :PI;
+        %tmp.239 = mul %tmp.236 %tmp.238;
+        %tmp.240 = 180;
+        %tmp.241 = div %tmp.239 %tmp.240;
+        %tmp.242 = invoke %tmp.231 %tmp.232(%tmp.241);
+        %tmp.243 = mul %tmp.230 %tmp.242;
+        lputv %ax.11 %tmp.243;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 200 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_16_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_16_stop" ]
+        %ay.12 = local;
+        %tmp.245 = getv ? :AWS;
+        %tmp.246 = getm $.Toybox.Math;
+        %tmp.247 = getv function %tmp.246 :sin;
+        %tmp.248 = -1;
+        %tmp.250 = getv ? :AWD;
+        %tmp.251 = mul %tmp.248 %tmp.250;
+        %tmp.252 = getm $.Toybox.Math;
+        %tmp.253 = getv %tmp.252 :PI;
+        %tmp.254 = mul %tmp.251 %tmp.253;
+        %tmp.255 = 180;
+        %tmp.256 = div %tmp.254 %tmp.255;
+        %tmp.257 = invoke %tmp.246 %tmp.247(%tmp.256);
+        %tmp.258 = mul %tmp.245 %tmp.257;
+        lputv %ay.12 %tmp.258;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 202 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_16_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_16_stop" ]
+        %rx.13 = local;
+        %tmp.260 = lgetv %ax.11;
+        %tmp.262 = getv ? :SOG;
+        %tmp.263 = sub %tmp.260 %tmp.262;
+        lputv %rx.13 %tmp.263;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 203 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_16_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_16_stop" ]
+        %ry.14 = local;
+        %tmp.265 = lgetv %ay.12;
+        lputv %ry.14 %tmp.265;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 205 3 ]
+        %tmp.266 = -1;
+        %tmp.267 = getm $.Toybox.Math;
+        %tmp.268 = getv function %tmp.267 :atan2;
+        %tmp.270 = lgetv %ry.14;
+        %tmp.272 = lgetv %rx.13;
+        %tmp.273 = invoke %tmp.267 %tmp.268(%tmp.270, %tmp.272);
+        %tmp.274 = mul %tmp.266 %tmp.273;
+        %tmp.275 = 180;
+        %tmp.276 = mul %tmp.274 %tmp.275;
+        %tmp.277 = getm $.Toybox.Math;
+        %tmp.278 = getv %tmp.277 :PI;
+        %tmp.279 = div %tmp.276 %tmp.278;
+        putv self :TWD %tmp.279;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 206 3 ]
+        %tmp.280 = getm $.Toybox.Math;
+        %tmp.281 = getv function %tmp.280 :sqrt;
+        %tmp.283 = lgetv %rx.13;
+        %tmp.285 = lgetv %rx.13;
+        %tmp.286 = mul %tmp.283 %tmp.285;
+        %tmp.288 = lgetv %ry.14;
+        %tmp.290 = lgetv %ry.14;
+        %tmp.291 = mul %tmp.288 %tmp.290;
+        %tmp.292 = add %tmp.286 %tmp.291;
+        %tmp.293 = invoke %tmp.280 %tmp.281(%tmp.292);
+        putv self :TWS %tmp.293;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 207 3 ]
+        %tmp.295 = getv ? :SOG;
+        %tmp.296 = getm $.Toybox.Math;
+        %tmp.297 = getv function %tmp.296 :cos;
+        %tmp.299 = getv ? :TWD;
+        %tmp.300 = getm $.Toybox.Math;
+        %tmp.301 = getv %tmp.300 :PI;
+        %tmp.302 = mul %tmp.299 %tmp.301;
+        %tmp.303 = 180;
+        %tmp.304 = div %tmp.302 %tmp.303;
+        %tmp.305 = invoke %tmp.296 %tmp.297(%tmp.304);
+        %tmp.306 = mul %tmp.295 %tmp.305;
+        lputv %VMG.2 %tmp.306;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 209 3 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_209_3_if_stmt:
+        %tmp.308 = getv ? :TWD;
+        %tmp.309 = 180;
+        %tmp.310 = lt %tmp.308 %tmp.309;
+        bf %tmp.310 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_209_3_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_209_3_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_209_19_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 209 20 ]
+        %tmp.311 = 2;
+        %tmp.313 = getv ? :TWD;
+        %tmp.314 = mul %tmp.311 %tmp.313;
+        lputv %NBD.3 %tmp.314;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_209_19_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_209_3_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_209_3_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_210_8_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 210 9 ]
+        %tmp.315 = 2;
+        %tmp.317 = getv ? :TWD;
+        %tmp.318 = mul %tmp.315 %tmp.317;
+        %tmp.319 = 360;
+        %tmp.320 = sub %tmp.318 %tmp.319;
+        lputv %NBD.3 %tmp.320;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_210_8_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_209_3_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 212 3 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_3_if_stmt:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_7_begin:
+        %tmp.322 = lgetv %ax.11;
+        %tmp.323 = 0;
+        %tmp.324 = eq %tmp.322 %tmp.323;
+        %tmp.325 = dup %tmp.324;
+        bf %tmp.325 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_18_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_18_true:
+        %tmp.327 = getv ? :TWS;
+        %tmp.328 = 0;
+        %tmp.329 = eq %tmp.327 %tmp.328;
+        %tmp.330 = and %tmp.324 %tmp.329;
+        push %tmp.330;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_18_end:
+        %tmp.331 = phi [%tmp.325 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_7_begin] [%tmp.330 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_18_true] [%tmp.331 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_18_end];
+        bf %tmp.331 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_3_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_3_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_28_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 213 4 ]
+        %tmp.333 = getv ? :AWD;
+        putv self :TWD %tmp.333;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 214 4 ]
+        %tmp.335 = getv ? :AWS;
+        putv self :TWS %tmp.335;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 215 4 ]
+        %tmp.337 = getv ? :TWD;
+        lputv %NBD.3 %tmp.337;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_28_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_3_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_212_3_if_end:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_16_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_2_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_218_9_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 219 3 ]
+        %tmp.339 = getv ? :AWD;
+        putv self :TWD %tmp.339;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 220 3 ]
+        %tmp.341 = getv ? :AWS;
+        putv self :TWS %tmp.341;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 221 3 ]
+        %tmp.343 = getv ? :TWD;
+        lputv %NBD.3 %tmp.343;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_218_9_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_197_2_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 226 2 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_226_2_if_stmt:
+        %tmp.345 = getv ? :field;
+        %tmp.346 = 2;
+        %tmp.347 = agetv %tmp.345 %tmp.346;
+        %tmp.348 = 1;
+        %tmp.349 = lt %tmp.347 %tmp.348;
+        bf %tmp.349 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_226_2_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_226_2_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_226_20_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 227 3 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_227_3_if_stmt:
+        %tmp.351 = getv ? :field;
+        %tmp.352 = 1;
+        %tmp.353 = agetv %tmp.351 %tmp.352;
+        %tmp.354 = 1;
+        %tmp.355 = lt %tmp.353 %tmp.354;
+        bf %tmp.355 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_227_3_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_227_3_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_227_21_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 227 22 ]
+        %tmp.357 = getv ? :TWS;
+        %tmp.359 = getv ? :WIND_FACTOR;
+        %tmp.360 = mul %tmp.357 %tmp.359;
+        %tmp.361 = 0.5;
+        %tmp.362 = add %tmp.360 %tmp.361;
+        lputv %WS.1 %tmp.362;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_227_21_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_227_3_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_227_3_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_228_8_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 228 9 ]
+        %tmp.364 = getv ? :AWS;
+        %tmp.366 = getv ? :WIND_FACTOR;
+        %tmp.367 = mul %tmp.364 %tmp.366;
+        %tmp.368 = 0.5;
+        %tmp.369 = add %tmp.367 %tmp.368;
+        lputv %WS.1 %tmp.369;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_228_8_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_227_3_if_end:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_226_20_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_226_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_226_2_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_229_9_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 230 3 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_230_3_if_stmt:
+        %tmp.371 = getv ? :field;
+        %tmp.372 = 1;
+        %tmp.373 = agetv %tmp.371 %tmp.372;
+        %tmp.374 = 1;
+        %tmp.375 = lt %tmp.373 %tmp.374;
+        bf %tmp.375 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_230_3_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_230_3_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_230_21_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 230 22 ]
+        %tmp.377 = getv ? :TWS;
+        %tmp.378 = 0.5;
+        %tmp.379 = add %tmp.377 %tmp.378;
+        lputv %WS.1 %tmp.379;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_230_21_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_230_3_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_230_3_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_231_8_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 231 9 ]
+        %tmp.381 = getv ? :AWS;
+        %tmp.382 = 0.5;
+        %tmp.383 = add %tmp.381 %tmp.382;
+        lputv %WS.1 %tmp.383;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_231_8_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_230_3_if_end:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_229_9_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_226_2_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 240 2 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_2_if_stmt:
+        %tmp.385 = getv ? :DataField;
+        %tmp.386 = getv function %tmp.385 :getObscurityFlags;
+        %tmp.387 = invoke %tmp.385 %tmp.386();
+        %tmp.388 = 15;
+        %tmp.389 = eq %tmp.387 %tmp.388;
+        bf %tmp.389 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_2_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_2_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 243 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop" ]
+        %i.15 = local;
+        %tmp.391 = getv ? :AWD;
+        %tmp.392 = 90;
+        %tmp.393 = sub %tmp.391 %tmp.392;
+        lputv %i.15 %tmp.393;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 244 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop" ]
+        %sin.16 = local;
+        %tmp.394 = getm $.Toybox.Math;
+        %tmp.395 = getv function %tmp.394 :sin;
+        %tmp.397 = lgetv %i.15;
+        %tmp.398 = 57.2957;
+        %tmp.399 = div %tmp.397 %tmp.398;
+        %tmp.400 = invoke %tmp.394 %tmp.395(%tmp.399);
+        lputv %sin.16 %tmp.400;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 245 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop" ]
+        %cos.17 = local;
+        %tmp.401 = getm $.Toybox.Math;
+        %tmp.402 = getv function %tmp.401 :cos;
+        %tmp.404 = lgetv %i.15;
+        %tmp.405 = 57.2957;
+        %tmp.406 = div %tmp.404 %tmp.405;
+        %tmp.407 = invoke %tmp.401 %tmp.402(%tmp.406);
+        lputv %cos.17 %tmp.407;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 247 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop" ]
+        %j.18 = local;
+        %tmp.409 = getv ? :TWD;
+        %tmp.410 = 90;
+        %tmp.411 = sub %tmp.409 %tmp.410;
+        lputv %j.18 %tmp.411;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 248 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop" ]
+        %sin_t.19 = local;
+        %tmp.412 = getm $.Toybox.Math;
+        %tmp.413 = getv function %tmp.412 :sin;
+        %tmp.415 = lgetv %j.18;
+        %tmp.416 = 57.2957;
+        %tmp.417 = div %tmp.415 %tmp.416;
+        %tmp.418 = invoke %tmp.412 %tmp.413(%tmp.417);
+        lputv %sin_t.19 %tmp.418;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 249 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop" ]
+        %cos_t.20 = local;
+        %tmp.419 = getm $.Toybox.Math;
+        %tmp.420 = getv function %tmp.419 :cos;
+        %tmp.422 = lgetv %j.18;
+        %tmp.423 = 57.2957;
+        %tmp.424 = div %tmp.422 %tmp.423;
+        %tmp.425 = invoke %tmp.419 %tmp.420(%tmp.424);
+        lputv %cos_t.20 %tmp.425;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 251 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop" ]
+        %k.21 = local;
+        %tmp.427 = lgetv %NBD.3;
+        %tmp.428 = 90;
+        %tmp.429 = sub %tmp.427 %tmp.428;
+        lputv %k.21 %tmp.429;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 252 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop" ]
+        %sin_b.22 = local;
+        %tmp.430 = getm $.Toybox.Math;
+        %tmp.431 = getv function %tmp.430 :sin;
+        %tmp.433 = lgetv %k.21;
+        %tmp.434 = 57.2957;
+        %tmp.435 = div %tmp.433 %tmp.434;
+        %tmp.436 = invoke %tmp.430 %tmp.431(%tmp.435);
+        lputv %sin_b.22 %tmp.436;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 253 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop" ]
+        %cos_b.23 = local;
+        %tmp.437 = getm $.Toybox.Math;
+        %tmp.438 = getv function %tmp.437 :cos;
+        %tmp.440 = lgetv %k.21;
+        %tmp.441 = 57.2957;
+        %tmp.442 = div %tmp.440 %tmp.441;
+        %tmp.443 = invoke %tmp.437 %tmp.438(%tmp.442);
+        lputv %cos_b.23 %tmp.443;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 255 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop" ]
+        %r.24 = local;
+        %tmp.445 = getv ? :x0;
+        lputv %r.24 %tmp.445;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 259 3 ]
+        %tmp.446 = lgetv %dc;
+        %tmp.447 = getv function %tmp.446 :setPenWidth;
+        %tmp.448 = 14;
+        invoke %tmp.446 %tmp.447(%tmp.448);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 261 3 ]
+        %tmp.449 = lgetv %dc;
+        %tmp.450 = getv function %tmp.449 :setColor;
+        %tmp.451 = getm $.Toybox.Graphics;
+        %tmp.452 = getv %tmp.451 :COLOR_GREEN;
+        %tmp.453 = getm $.Toybox.Graphics;
+        %tmp.454 = getv %tmp.453 :COLOR_TRANSPARENT;
+        invoke %tmp.449 %tmp.450(%tmp.452, %tmp.454);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 262 3 ]
+        %tmp.455 = lgetv %dc;
+        %tmp.456 = getv function %tmp.455 :drawArc;
+        %tmp.458 = getv ? :x0;
+        %tmp.460 = getv ? :y0;
+        %tmp.462 = lgetv %r.24;
+        %tmp.463 = 7;
+        %tmp.464 = sub %tmp.462 %tmp.463;
+        %tmp.465 = getm $.Toybox.Graphics;
+        %tmp.466 = getv %tmp.465 :ARC_CLOCKWISE;
+        %tmp.467 = 70;
+        %tmp.468 = 30;
+        invoke %tmp.455 %tmp.456(%tmp.458, %tmp.460, %tmp.464, %tmp.466, %tmp.467, %tmp.468);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 264 3 ]
+        %tmp.469 = lgetv %dc;
+        %tmp.470 = getv function %tmp.469 :setColor;
+        %tmp.471 = getm $.Toybox.Graphics;
+        %tmp.472 = getv %tmp.471 :COLOR_RED;
+        %tmp.473 = getm $.Toybox.Graphics;
+        %tmp.474 = getv %tmp.473 :COLOR_TRANSPARENT;
+        invoke %tmp.469 %tmp.470(%tmp.472, %tmp.474);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 265 3 ]
+        %tmp.475 = lgetv %dc;
+        %tmp.476 = getv function %tmp.475 :drawArc;
+        %tmp.478 = getv ? :x0;
+        %tmp.480 = getv ? :y0;
+        %tmp.482 = lgetv %r.24;
+        %tmp.483 = 7;
+        %tmp.484 = sub %tmp.482 %tmp.483;
+        %tmp.485 = getm $.Toybox.Graphics;
+        %tmp.486 = getv %tmp.485 :ARC_CLOCKWISE;
+        %tmp.487 = 150;
+        %tmp.488 = 110;
+        invoke %tmp.475 %tmp.476(%tmp.478, %tmp.480, %tmp.484, %tmp.486, %tmp.487, %tmp.488);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 268 3 ]
+        %tmp.489 = lgetv %dc;
+        %tmp.490 = getv function %tmp.489 :setColor;
+        %tmp.492 = lgetv %_color.4;
+        %tmp.493 = getm $.Toybox.Graphics;
+        %tmp.494 = getv %tmp.493 :COLOR_TRANSPARENT;
+        invoke %tmp.489 %tmp.490(%tmp.492, %tmp.494);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 269 3 ]
+        %tmp.495 = lgetv %dc;
+        %tmp.496 = getv function %tmp.495 :setPenWidth;
+        %tmp.497 = 2;
+        invoke %tmp.495 %tmp.496(%tmp.497);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 270 3 ]
+        for @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_270_3_for_test @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_270_3_for_incr @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_270_3_for_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_270_3_for_init:
+        %tmp.498 = 0;
+        lputv %i.15 %tmp.498;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_270_3_for_test:
+        %tmp.500 = lgetv %i.15;
+        %tmp.501 = 10;
+        %tmp.502 = lte %tmp.500 %tmp.501;
+        bf %tmp.502 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_270_3_for_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_270_3_for_begin:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_270_29_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 271 4 ]
+        %tmp.503 = lgetv %dc;
+        %tmp.504 = getv function %tmp.503 :drawLine;
+        %tmp.506 = getv ? :x0;
+        %tmp.508 = getv ? :f_cos;
+        %tmp.510 = lgetv %i.15;
+        %tmp.511 = agetv %tmp.508 %tmp.510;
+        %tmp.513 = lgetv %r.24;
+        %tmp.514 = 14;
+        %tmp.515 = sub %tmp.513 %tmp.514;
+        %tmp.516 = mul %tmp.511 %tmp.515;
+        %tmp.517 = add %tmp.506 %tmp.516;
+        %tmp.519 = getv ? :y0;
+        %tmp.521 = getv ? :f_sin;
+        %tmp.523 = lgetv %i.15;
+        %tmp.524 = agetv %tmp.521 %tmp.523;
+        %tmp.526 = lgetv %r.24;
+        %tmp.527 = 14;
+        %tmp.528 = sub %tmp.526 %tmp.527;
+        %tmp.529 = mul %tmp.524 %tmp.528;
+        %tmp.530 = add %tmp.519 %tmp.529;
+        %tmp.532 = getv ? :x0;
+        %tmp.534 = getv ? :f_cos;
+        %tmp.536 = lgetv %i.15;
+        %tmp.537 = agetv %tmp.534 %tmp.536;
+        %tmp.539 = lgetv %r.24;
+        %tmp.540 = mul %tmp.537 %tmp.539;
+        %tmp.541 = add %tmp.532 %tmp.540;
+        %tmp.543 = getv ? :y0;
+        %tmp.545 = getv ? :f_sin;
+        %tmp.547 = lgetv %i.15;
+        %tmp.548 = agetv %tmp.545 %tmp.547;
+        %tmp.550 = lgetv %r.24;
+        %tmp.551 = mul %tmp.548 %tmp.550;
+        %tmp.552 = add %tmp.543 %tmp.551;
+        invoke %tmp.503 %tmp.504(%tmp.517, %tmp.530, %tmp.541, %tmp.552);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_270_29_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_270_3_for_incr:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 270 ]
+        %tmp.555 = lgetv %i.15;
+        %tmp.556 = add %tmp.555 1;
+        lputv %i.15 %tmp.556;
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_270_3_for_test;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_270_3_for_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 281 3 ]
+        %tmp.557 = lgetv %dc;
+        %tmp.558 = getv function %tmp.557 :drawText;
+        %tmp.560 = getv ? :x0;
+        %tmp.562 = getv ? :_viewHeight;
+        %tmp.563 = 0.33;
+        %tmp.564 = mul %tmp.562 %tmp.563;
+        %tmp.566 = getv ? :_lineHeight_large;
+        %tmp.567 = 2;
+        %tmp.568 = div %tmp.566 %tmp.567;
+        %tmp.569 = sub %tmp.564 %tmp.568;
+        %tmp.571 = getv ? :_font_large;
+        %tmp.572 = lgetv %WS.1;
+        %tmp.573 = getv function %tmp.572 :format;
+        %tmp.574 = "%d";
+        %tmp.575 = invoke %tmp.572 %tmp.573(%tmp.574);
+        %tmp.577 = getv ? :_cjust;
+        invoke %tmp.557 %tmp.558(%tmp.560, %tmp.569, %tmp.571, %tmp.575, %tmp.577);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 282 3 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_282_3_if_stmt:
+        %tmp.579 = getv ? :field;
+        %tmp.580 = 1;
+        %tmp.581 = agetv %tmp.579 %tmp.580;
+        %tmp.582 = 0;
+        %tmp.583 = gt %tmp.581 %tmp.582;
+        bf %tmp.583 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_282_3_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_282_3_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_282_21_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 282 22 ]
+        %tmp.584 = lgetv %dc;
+        %tmp.585 = getv function %tmp.584 :drawText;
+        %tmp.587 = getv ? :x0;
+        %tmp.589 = getv ? :_lineHeight;
+        %tmp.590 = 3;
+        %tmp.591 = add %tmp.589 %tmp.590;
+        %tmp.593 = getv ? :_font;
+        %tmp.594 = "AWS ";
+        %tmp.596 = getv ? :_cjust;
+        invoke %tmp.584 %tmp.585(%tmp.587, %tmp.591, %tmp.593, %tmp.594, %tmp.596);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_282_21_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_282_3_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_282_3_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_283_10_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 283 11 ]
+        %tmp.597 = lgetv %dc;
+        %tmp.598 = getv function %tmp.597 :drawText;
+        %tmp.600 = getv ? :x0;
+        %tmp.602 = getv ? :_lineHeight;
+        %tmp.603 = 3;
+        %tmp.604 = add %tmp.602 %tmp.603;
+        %tmp.606 = getv ? :_font;
+        %tmp.607 = "TWS ";
+        %tmp.609 = getv ? :_cjust;
+        invoke %tmp.597 %tmp.598(%tmp.600, %tmp.604, %tmp.606, %tmp.607, %tmp.609);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_283_10_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_282_3_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 286 3 ]
+        %tmp.610 = lgetv %dc;
+        %tmp.611 = getv function %tmp.610 :drawText;
+        %tmp.613 = getv ? :_viewWidth;
+        %tmp.614 = 0.25;
+        %tmp.615 = mul %tmp.613 %tmp.614;
+        %tmp.616 = 20;
+        %tmp.617 = add %tmp.615 %tmp.616;
+        %tmp.619 = getv ? :_viewHeight;
+        %tmp.620 = 0.66;
+        %tmp.621 = mul %tmp.619 %tmp.620;
+        %tmp.623 = getv ? :_lineHeight_medium;
+        %tmp.624 = 2;
+        %tmp.625 = div %tmp.623 %tmp.624;
+        %tmp.626 = sub %tmp.621 %tmp.625;
+        %tmp.628 = getv ? :_font_medium;
+        %tmp.630 = getv ? :SOG;
+        %tmp.631 = 1.9438;
+        %tmp.632 = mul %tmp.630 %tmp.631;
+        %tmp.633 = getv function %tmp.632 :format;
+        %tmp.634 = "%0.1f";
+        %tmp.635 = invoke %tmp.632 %tmp.633(%tmp.634);
+        %tmp.637 = getv ? :_cjust;
+        invoke %tmp.610 %tmp.611(%tmp.617, %tmp.626, %tmp.628, %tmp.635, %tmp.637);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 287 3 ]
+        %tmp.638 = lgetv %dc;
+        %tmp.639 = getv function %tmp.638 :drawText;
+        %tmp.641 = getv ? :_viewWidth;
+        %tmp.642 = 0.25;
+        %tmp.643 = mul %tmp.641 %tmp.642;
+        %tmp.644 = 20;
+        %tmp.645 = add %tmp.643 %tmp.644;
+        %tmp.647 = getv ? :_viewHeight;
+        %tmp.648 = 0.5;
+        %tmp.649 = mul %tmp.647 %tmp.648;
+        %tmp.651 = getv ? :_font;
+        %tmp.652 = "SOG";
+        %tmp.654 = getv ? :_cjust;
+        invoke %tmp.638 %tmp.639(%tmp.645, %tmp.649, %tmp.651, %tmp.652, %tmp.654);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 290 3 ]
+        %tmp.655 = lgetv %dc;
+        %tmp.656 = getv function %tmp.655 :drawText;
+        %tmp.658 = getv ? :_viewWidth;
+        %tmp.659 = 0.75;
+        %tmp.660 = mul %tmp.658 %tmp.659;
+        %tmp.661 = 20;
+        %tmp.662 = sub %tmp.660 %tmp.661;
+        %tmp.664 = getv ? :_viewHeight;
+        %tmp.665 = 0.66;
+        %tmp.666 = mul %tmp.664 %tmp.665;
+        %tmp.668 = getv ? :_lineHeight_medium;
+        %tmp.669 = 2;
+        %tmp.670 = div %tmp.668 %tmp.669;
+        %tmp.671 = sub %tmp.666 %tmp.670;
+        %tmp.673 = getv ? :_font_medium;
+        %tmp.675 = lgetv %VMG.2;
+        %tmp.676 = 1.9438;
+        %tmp.677 = mul %tmp.675 %tmp.676;
+        %tmp.678 = getv function %tmp.677 :format;
+        %tmp.679 = "%0.1f";
+        %tmp.680 = invoke %tmp.677 %tmp.678(%tmp.679);
+        %tmp.682 = getv ? :_cjust;
+        invoke %tmp.655 %tmp.656(%tmp.662, %tmp.671, %tmp.673, %tmp.680, %tmp.682);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 291 3 ]
+        %tmp.683 = lgetv %dc;
+        %tmp.684 = getv function %tmp.683 :drawText;
+        %tmp.686 = getv ? :_viewWidth;
+        %tmp.687 = 0.75;
+        %tmp.688 = mul %tmp.686 %tmp.687;
+        %tmp.689 = 20;
+        %tmp.690 = sub %tmp.688 %tmp.689;
+        %tmp.692 = getv ? :_viewHeight;
+        %tmp.693 = 0.5;
+        %tmp.694 = mul %tmp.692 %tmp.693;
+        %tmp.696 = getv ? :_font;
+        %tmp.697 = "VMG";
+        %tmp.699 = getv ? :_cjust;
+        invoke %tmp.683 %tmp.684(%tmp.690, %tmp.694, %tmp.696, %tmp.697, %tmp.699);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 295 3 ]
+        %tmp.700 = lgetv %dc;
+        %tmp.701 = getv function %tmp.700 :setPenWidth;
+        %tmp.702 = 9;
+        invoke %tmp.700 %tmp.701(%tmp.702);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 296 3 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_296_3_if_stmt:
+        %tmp.704 = getv ? :field;
+        %tmp.705 = 0;
+        %tmp.706 = agetv %tmp.704 %tmp.705;
+        %tmp.707 = 0;
+        %tmp.708 = gt %tmp.706 %tmp.707;
+        bf %tmp.708 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_296_3_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_296_3_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_296_21_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 298 4 ]
+        %tmp.709 = lgetv %dc;
+        %tmp.710 = getv function %tmp.709 :drawLine;
+        %tmp.712 = getv ? :x0;
+        %tmp.714 = lgetv %cos.17;
+        %tmp.716 = lgetv %r.24;
+        %tmp.717 = 35;
+        %tmp.718 = sub %tmp.716 %tmp.717;
+        %tmp.719 = mul %tmp.714 %tmp.718;
+        %tmp.720 = add %tmp.712 %tmp.719;
+        %tmp.722 = getv ? :y0;
+        %tmp.724 = lgetv %sin.16;
+        %tmp.726 = lgetv %r.24;
+        %tmp.727 = 35;
+        %tmp.728 = sub %tmp.726 %tmp.727;
+        %tmp.729 = mul %tmp.724 %tmp.728;
+        %tmp.730 = add %tmp.722 %tmp.729;
+        %tmp.732 = getv ? :x0;
+        %tmp.734 = lgetv %cos.17;
+        %tmp.736 = lgetv %r.24;
+        %tmp.737 = mul %tmp.734 %tmp.736;
+        %tmp.738 = add %tmp.732 %tmp.737;
+        %tmp.740 = getv ? :y0;
+        %tmp.742 = lgetv %sin.16;
+        %tmp.744 = lgetv %r.24;
+        %tmp.745 = mul %tmp.742 %tmp.744;
+        %tmp.746 = add %tmp.740 %tmp.745;
+        invoke %tmp.709 %tmp.710(%tmp.720, %tmp.730, %tmp.738, %tmp.746);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 302 4 ]
+        %tmp.747 = lgetv %dc;
+        %tmp.748 = getv function %tmp.747 :drawText;
+        %tmp.750 = getv ? :x0;
+        %tmp.751 = 3;
+        %tmp.753 = getv ? :_font;
+        %tmp.754 = "AWD/";
+        %tmp.756 = getv ? :_cjust;
+        invoke %tmp.747 %tmp.748(%tmp.750, %tmp.751, %tmp.753, %tmp.754, %tmp.756);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_296_21_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_296_3_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_296_3_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_303_10_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 305 4 ]
+        %tmp.757 = lgetv %dc;
+        %tmp.758 = getv function %tmp.757 :drawLine;
+        %tmp.760 = getv ? :x0;
+        %tmp.762 = lgetv %cos_t.20;
+        %tmp.764 = lgetv %r.24;
+        %tmp.765 = 35;
+        %tmp.766 = sub %tmp.764 %tmp.765;
+        %tmp.767 = mul %tmp.762 %tmp.766;
+        %tmp.768 = add %tmp.760 %tmp.767;
+        %tmp.770 = getv ? :y0;
+        %tmp.772 = lgetv %sin_t.19;
+        %tmp.774 = lgetv %r.24;
+        %tmp.775 = 35;
+        %tmp.776 = sub %tmp.774 %tmp.775;
+        %tmp.777 = mul %tmp.772 %tmp.776;
+        %tmp.778 = add %tmp.770 %tmp.777;
+        %tmp.780 = getv ? :x0;
+        %tmp.782 = lgetv %cos_t.20;
+        %tmp.784 = lgetv %r.24;
+        %tmp.785 = mul %tmp.782 %tmp.784;
+        %tmp.786 = add %tmp.780 %tmp.785;
+        %tmp.788 = getv ? :y0;
+        %tmp.790 = lgetv %sin_t.19;
+        %tmp.792 = lgetv %r.24;
+        %tmp.793 = mul %tmp.790 %tmp.792;
+        %tmp.794 = add %tmp.788 %tmp.793;
+        invoke %tmp.757 %tmp.758(%tmp.768, %tmp.778, %tmp.786, %tmp.794);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 309 4 ]
+        %tmp.795 = lgetv %dc;
+        %tmp.796 = getv function %tmp.795 :drawText;
+        %tmp.798 = getv ? :x0;
+        %tmp.799 = 3;
+        %tmp.801 = getv ? :_font;
+        %tmp.802 = "TWD/";
+        %tmp.804 = getv ? :_cjust;
+        invoke %tmp.795 %tmp.796(%tmp.798, %tmp.799, %tmp.801, %tmp.802, %tmp.804);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_303_10_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_296_3_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 314 3 ]
+        %tmp.805 = lgetv %dc;
+        %tmp.806 = getv function %tmp.805 :setPenWidth;
+        %tmp.807 = 3;
+        invoke %tmp.805 %tmp.806(%tmp.807);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 315 3 ]
+        %tmp.808 = lgetv %dc;
+        %tmp.809 = getv function %tmp.808 :drawLine;
+        %tmp.811 = getv ? :x0;
+        %tmp.813 = lgetv %cos_b.23;
+        %tmp.815 = lgetv %r.24;
+        %tmp.816 = 35;
+        %tmp.817 = sub %tmp.815 %tmp.816;
+        %tmp.818 = mul %tmp.813 %tmp.817;
+        %tmp.819 = add %tmp.811 %tmp.818;
+        %tmp.821 = getv ? :y0;
+        %tmp.823 = lgetv %sin_b.22;
+        %tmp.825 = lgetv %r.24;
+        %tmp.826 = 35;
+        %tmp.827 = sub %tmp.825 %tmp.826;
+        %tmp.828 = mul %tmp.823 %tmp.827;
+        %tmp.829 = add %tmp.821 %tmp.828;
+        %tmp.831 = getv ? :x0;
+        %tmp.833 = lgetv %cos_b.23;
+        %tmp.835 = lgetv %r.24;
+        %tmp.836 = mul %tmp.833 %tmp.835;
+        %tmp.837 = add %tmp.831 %tmp.836;
+        %tmp.839 = getv ? :y0;
+        %tmp.841 = lgetv %sin_b.22;
+        %tmp.843 = lgetv %r.24;
+        %tmp.844 = mul %tmp.841 %tmp.843;
+        %tmp.845 = add %tmp.839 %tmp.844;
+        invoke %tmp.808 %tmp.809(%tmp.819, %tmp.829, %tmp.837, %tmp.845);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 323 3 ]
+        %tmp.846 = lgetv %dc;
+        %tmp.847 = getv function %tmp.846 :setPenWidth;
+        %tmp.848 = 7;
+        invoke %tmp.846 %tmp.847(%tmp.848);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 325 3 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_325_3_if_stmt:
+        %tmp.850 = lgetv %roll.6;
+        %tmp.851 = 0;
+        %tmp.852 = gt %tmp.850 %tmp.851;
+        bf %tmp.852 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_325_3_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_325_3_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_325_17_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 325 18 ]
+        %tmp.853 = lgetv %dc;
+        %tmp.854 = getv function %tmp.853 :drawArc;
+        %tmp.856 = getv ? :x0;
+        %tmp.858 = getv ? :y0;
+        %tmp.860 = lgetv %r.24;
+        %tmp.861 = 17;
+        %tmp.862 = sub %tmp.860 %tmp.861;
+        %tmp.863 = getm $.Toybox.Graphics;
+        %tmp.864 = getv %tmp.863 :ARC_CLOCKWISE;
+        %tmp.865 = 270;
+        %tmp.866 = 270;
+        %tmp.868 = lgetv %roll.6;
+        %tmp.869 = sub %tmp.866 %tmp.868;
+        invoke %tmp.853 %tmp.854(%tmp.856, %tmp.858, %tmp.862, %tmp.864, %tmp.865, %tmp.869);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_325_17_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_325_3_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_325_3_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_326_8_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 326 9 ]
+        %tmp.870 = lgetv %dc;
+        %tmp.871 = getv function %tmp.870 :drawArc;
+        %tmp.873 = getv ? :x0;
+        %tmp.875 = getv ? :y0;
+        %tmp.877 = lgetv %r.24;
+        %tmp.878 = 17;
+        %tmp.879 = sub %tmp.877 %tmp.878;
+        %tmp.880 = getm $.Toybox.Graphics;
+        %tmp.881 = getv %tmp.880 :ARC_CLOCKWISE;
+        %tmp.882 = 270;
+        %tmp.884 = lgetv %roll.6;
+        %tmp.885 = sub %tmp.882 %tmp.884;
+        %tmp.886 = 270;
+        invoke %tmp.870 %tmp.871(%tmp.873, %tmp.875, %tmp.879, %tmp.881, %tmp.885, %tmp.886);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_326_8_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_325_3_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 330 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop" ]
+        %delta_x.25 = local;
+        %tmp.888 = getv ? :_lineHeight;
+        %tmp.889 = 2;
+        %tmp.890 = mul %tmp.888 %tmp.889;
+        lputv %delta_x.25 %tmp.890;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 331 3 ]
+        [ "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_start" "C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop" ]
+        %delta_y.26 = local;
+        %tmp.891 = getm $.Toybox.Math;
+        %tmp.892 = getv function %tmp.891 :ceil;
+        %tmp.894 = lgetv %delta_x.25;
+        %tmp.895 = 2.7;
+        %tmp.896 = div %tmp.894 %tmp.895;
+        %tmp.897 = invoke %tmp.891 %tmp.892(%tmp.896);
+        lputv %delta_y.26 %tmp.897;
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 333 3 ]
+        %tmp.898 = lgetv %dc;
+        %tmp.899 = getv function %tmp.898 :setPenWidth;
+        %tmp.900 = 2;
+        invoke %tmp.898 %tmp.899(%tmp.900);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 335 3 ]
+        for @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_335_3_for_test @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_335_3_for_incr @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_335_3_for_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_335_3_for_init:
+        %tmp.901 = 0;
+        lputv %i.15 %tmp.901;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_335_3_for_test:
+        %tmp.903 = lgetv %i.15;
+        %tmp.904 = 10;
+        %tmp.905 = lt %tmp.903 %tmp.904;
+        bf %tmp.905 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_335_3_for_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_335_3_for_begin:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_335_28_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 336 4 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_336_4_if_stmt:
+        %tmp.907 = lgetv %batt.5;
+        %tmp.909 = lgetv %i.15;
+        %tmp.910 = gte %tmp.907 %tmp.909;
+        bf %tmp.910 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_336_4_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_336_4_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_336_19_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 337 5 ]
+        %tmp.911 = lgetv %dc;
+        %tmp.912 = getv function %tmp.911 :setColor;
+        %tmp.913 = getm $.Toybox.Graphics;
+        %tmp.914 = getv %tmp.913 :COLOR_GREEN;
+        %tmp.915 = getm $.Toybox.Graphics;
+        %tmp.916 = getv %tmp.915 :COLOR_GREEN;
+        invoke %tmp.911 %tmp.912(%tmp.914, %tmp.916);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_336_19_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_336_4_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_336_4_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_338_11_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 339 5 ]
+        %tmp.917 = lgetv %dc;
+        %tmp.918 = getv function %tmp.917 :setColor;
+        %tmp.919 = getm $.Toybox.Graphics;
+        %tmp.920 = getv %tmp.919 :COLOR_TRANSPARENT;
+        %tmp.921 = getm $.Toybox.Graphics;
+        %tmp.922 = getv %tmp.921 :COLOR_TRANSPARENT;
+        invoke %tmp.917 %tmp.918(%tmp.920, %tmp.922);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_338_11_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_336_4_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 341 4 ]
+        %tmp.923 = lgetv %dc;
+        %tmp.924 = getv function %tmp.923 :fillRectangle;
+        %tmp.926 = getv ? :x0;
+        %tmp.928 = lgetv %delta_x.25;
+        %tmp.929 = 2;
+        %tmp.930 = div %tmp.928 %tmp.929;
+        %tmp.931 = sub %tmp.926 %tmp.930;
+        %tmp.933 = lgetv %i.15;
+        %tmp.935 = lgetv %delta_x.25;
+        %tmp.936 = mul %tmp.933 %tmp.935;
+        %tmp.937 = 10;
+        %tmp.938 = div %tmp.936 %tmp.937;
+        %tmp.939 = add %tmp.931 %tmp.938;
+        %tmp.941 = getv ? :_viewHeight;
+        %tmp.942 = 0.8;
+        %tmp.943 = mul %tmp.941 %tmp.942;
+        %tmp.944 = 1;
+        %tmp.946 = lgetv %delta_x.25;
+        %tmp.947 = 10;
+        %tmp.948 = div %tmp.946 %tmp.947;
+        %tmp.949 = add %tmp.944 %tmp.948;
+        %tmp.951 = lgetv %delta_y.26;
+        invoke %tmp.923 %tmp.924(%tmp.939, %tmp.943, %tmp.949, %tmp.951);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_335_28_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_335_3_for_incr:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 335 ]
+        %tmp.954 = lgetv %i.15;
+        %tmp.955 = add %tmp.954 1;
+        lputv %i.15 %tmp.955;
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_335_3_for_test;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_335_3_for_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 343 3 ]
+        %tmp.956 = lgetv %dc;
+        %tmp.957 = getv function %tmp.956 :setColor;
+        %tmp.959 = lgetv %_color.4;
+        %tmp.960 = getm $.Toybox.Graphics;
+        %tmp.961 = getv %tmp.960 :COLOR_TRANSPARENT;
+        invoke %tmp.956 %tmp.957(%tmp.959, %tmp.961);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 344 3 ]
+        %tmp.962 = lgetv %dc;
+        %tmp.963 = getv function %tmp.962 :drawRectangle;
+        %tmp.965 = getv ? :x0;
+        %tmp.967 = lgetv %delta_x.25;
+        %tmp.968 = 2;
+        %tmp.969 = div %tmp.967 %tmp.968;
+        %tmp.970 = sub %tmp.965 %tmp.969;
+        %tmp.972 = getv ? :_viewHeight;
+        %tmp.973 = 0.8;
+        %tmp.974 = mul %tmp.972 %tmp.973;
+        %tmp.975 = 1;
+        %tmp.977 = lgetv %delta_x.25;
+        %tmp.978 = add %tmp.975 %tmp.977;
+        %tmp.980 = lgetv %delta_y.26;
+        invoke %tmp.962 %tmp.963(%tmp.970, %tmp.974, %tmp.978, %tmp.980);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 345 3 ]
+        %tmp.981 = lgetv %dc;
+        %tmp.982 = getv function %tmp.981 :drawRectangle;
+        %tmp.984 = getv ? :x0;
+        %tmp.986 = lgetv %delta_x.25;
+        %tmp.987 = 2;
+        %tmp.988 = div %tmp.986 %tmp.987;
+        %tmp.989 = add %tmp.984 %tmp.988;
+        %tmp.991 = getv ? :_viewHeight;
+        %tmp.992 = 0.8;
+        %tmp.993 = mul %tmp.991 %tmp.992;
+        %tmp.994 = 3;
+        %tmp.995 = add %tmp.993 %tmp.994;
+        %tmp.996 = 3;
+        %tmp.998 = lgetv %delta_y.26;
+        %tmp.999 = 6;
+        %tmp.1000 = sub %tmp.998 %tmp.999;
+        invoke %tmp.981 %tmp.982(%tmp.989, %tmp.995, %tmp.996, %tmp.1000);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_43_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_2_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_2_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_348_9_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 350 3 ]
+        %tmp.1001 = lgetv %dc;
+        %tmp.1002 = getv function %tmp.1001 :setColor;
+        %tmp.1004 = lgetv %_color.4;
+        %tmp.1005 = getm $.Toybox.Graphics;
+        %tmp.1006 = getv %tmp.1005 :COLOR_TRANSPARENT;
+        invoke %tmp.1001 %tmp.1002(%tmp.1004, %tmp.1006);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 352 3 ]
+        %tmp.1007 = lgetv %dc;
+        %tmp.1008 = getv function %tmp.1007 :drawText;
+        %tmp.1010 = getv ? :x0;
+        %tmp.1012 = getv ? :y0;
+        %tmp.1014 = getv ? :_lineHeight_medium;
+        %tmp.1015 = 2;
+        %tmp.1016 = div %tmp.1014 %tmp.1015;
+        %tmp.1017 = sub %tmp.1012 %tmp.1016;
+        %tmp.1019 = getv ? :_lineHeight;
+        %tmp.1020 = 2;
+        %tmp.1021 = div %tmp.1019 %tmp.1020;
+        %tmp.1022 = add %tmp.1017 %tmp.1021;
+        %tmp.1024 = getv ? :_font_medium;
+        %tmp.1025 = lgetv %VMG.2;
+        %tmp.1026 = getv function %tmp.1025 :format;
+        %tmp.1027 = "%0.1f";
+        %tmp.1028 = invoke %tmp.1025 %tmp.1026(%tmp.1027);
+        %tmp.1030 = getv ? :_cjust;
+        invoke %tmp.1007 %tmp.1008(%tmp.1010, %tmp.1022, %tmp.1024, %tmp.1028, %tmp.1030);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 353 3 ]
+        %tmp.1031 = lgetv %dc;
+        %tmp.1032 = getv function %tmp.1031 :drawText;
+        %tmp.1034 = getv ? :x0;
+        %tmp.1035 = 3;
+        %tmp.1037 = getv ? :_font;
+        %tmp.1038 = "VMG";
+        %tmp.1040 = getv ? :_cjust;
+        invoke %tmp.1031 %tmp.1032(%tmp.1034, %tmp.1035, %tmp.1037, %tmp.1038, %tmp.1040);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_348_9_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_240_2_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 355 2 ]
+        ret ?;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_121_40_stop:
+    }
+    [ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 361; ]
+    function compute(info) {
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_361_27_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 363 8 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_363_8_if_stmt:
+        %tmp.2 = lgetv %info;
+        %tmp.4 = const :currentSpeed;
+        %tmp.5 = canhazplz %tmp.2 %tmp.4;
+        bf %tmp.5 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_363_8_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_363_8_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_363_34_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 364 12 ]
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_364_12_if_stmt:
+        %tmp.6 = lgetv %info;
+        %tmp.7 = as %tmp.6 { (interface { var currentSpeed; }) };
+        %tmp.8 = getv %tmp.7 :currentSpeed;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        bf %tmp.10 @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_364_12_if_false;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_364_12_if_true:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_364_42_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 365 16 ]
+        %tmp.11 = lgetv %info;
+        %tmp.12 = as %tmp.11 { (interface { var currentSpeed; }) };
+        %tmp.13 = getv %tmp.12 :currentSpeed;
+        putv self :SOG %tmp.13;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_364_42_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_364_12_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_364_12_if_false:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_366_19_start:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 367 16 ]
+        %tmp.14 = 0.0f;
+        putv self :SOG %tmp.14;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_366_19_stop:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_364_12_if_end:
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_363_34_stop:
+        goto @C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_363_8_if_end;
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_363_8_if_end:
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 371 8 ]
+        %tmp.16 = getv ? :_ultrasonicFitField_TWS;
+        %tmp.17 = getv function %tmp.16 :setData;
+        %tmp.19 = getv ? :TWS;
+        %tmp.21 = getv ? :WIND_FACTOR;
+        %tmp.22 = mul %tmp.19 %tmp.21;
+        invoke %tmp.16 %tmp.17(%tmp.22);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 372 8 ]
+        %tmp.24 = getv ? :_ultrasonicFitField_TWA;
+        %tmp.25 = getv function %tmp.24 :setData;
+        %tmp.27 = getv ? :TWD;
+        invoke %tmp.24 %tmp.25(%tmp.27);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 373 8 ]
+        %tmp.29 = getv ? :_ultrasonicFitField_AWS;
+        %tmp.30 = getv function %tmp.29 :setData;
+        %tmp.32 = getv ? :AWS;
+        %tmp.34 = getv ? :WIND_FACTOR;
+        %tmp.35 = mul %tmp.32 %tmp.34;
+        invoke %tmp.29 %tmp.30(%tmp.35);
+[ "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc" 374 8 ]
+        %tmp.37 = getv ? :_ultrasonicFitField_AWA;
+        %tmp.38 = getv function %tmp.37 :setData;
+        %tmp.40 = getv ? :AWD;
+        invoke %tmp.37 %tmp.38(%tmp.40);
+C_Users_Frank_Documents_Source_Ultrasonic_source_View_v2_0_mc_361_27_stop:
+    }
+}
+[ @file = "C:\Users\Frank\Documents\Source\Ultrasonic\source\View_v2.0.mc"; @line = 1; ]
+<init> {
+}
