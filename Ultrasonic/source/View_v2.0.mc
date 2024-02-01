@@ -159,8 +159,8 @@ class UltrasonicView extends WatchUi.DataField
 
 		/////////////////////////////////////////////////////////
 		// Activate for debugging                              //
-		 scanResults = [582, 0, 48, 0, 10, 131, 136, 0, 0, 0];//
-		 SOG = 3;                                            //
+		// scanResults = [582, 0, 48, 0, 10, 131, 136, 0, 0, 0];//
+		// SOG = 3;                                            //
 		/////////////////////////////////////////////////////////
 	
 		// While not connected to watch display this START SCREEN
