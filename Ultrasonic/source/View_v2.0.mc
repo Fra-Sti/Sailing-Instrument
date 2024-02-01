@@ -32,6 +32,8 @@ class UltrasonicView extends WatchUi.DataField
     hidden var count = 0;
 	hidden var x0;
     hidden var y0; 
+	hidden var _xOffset;
+	hidden var _yOffset;
     
     hidden var _ultrasonicFitField_TWS;
     hidden var _ultrasonicFitField_TWA;
@@ -92,10 +94,6 @@ class UltrasonicView extends WatchUi.DataField
 
     function onLayout(dc as Dc) { 
     	// Precalculated watch specific results
-        _xpos = dc.getWidth() / 3;
-		x0 = dc.getWidth() / 2;
-        y0 = dc.getHeight() / 2; 
-
         _font = Graphics.FONT_SYSTEM_XTINY ;
         _lineHeight = dc.getFontHeight(_font);
 
@@ -114,6 +112,16 @@ class UltrasonicView extends WatchUi.DataField
 
         _viewHeight = dc.getHeight();
         _viewWidth = dc.getWidth();
+
+		if (_viewHeight>_viewWidth) {_viewHeight=_viewWidth;}
+		else {_viewWidth=_viewHeight;}
+
+		_xOffset = (dc.getWidth() - _viewWidth) / 2;
+		_yOffset = (dc.getHeight() - _viewHeight) / 2;
+
+		x0 = _viewWidth / 2;
+        y0 = _viewHeight / 2;
+
     }
 
 
@@ -151,8 +159,8 @@ class UltrasonicView extends WatchUi.DataField
 
 		/////////////////////////////////////////////////////////
 		// Activate for debugging                              //
-		// scanResults = [582, 0, 48, 0, 10, 131, 136, 0, 0, 0];//
-		// SOG = 3;                                            //
+		 scanResults = [582, 0, 48, 0, 10, 131, 136, 0, 0, 0];//
+		 SOG = 3;                                            //
 		/////////////////////////////////////////////////////////
 	
 		// While not connected to watch display this START SCREEN
@@ -237,7 +245,8 @@ class UltrasonicView extends WatchUi.DataField
 
 		// Fullscreen
 		// https://forums.garmin.com/developer/connect-iq/f/discussion/227787/datafield-get-position-of-the-datafield-on-the-screen-top-half-top-quadrant-on-watch
-		if (DataField.getObscurityFlags() == 15) {
+		var obscureFlag = DataField.getObscurityFlags();
+		if (obscureFlag == 0 || obscureFlag == 15) {
 			
 			// cache math operations
 			var i = AWD - 90;
@@ -259,71 +268,71 @@ class UltrasonicView extends WatchUi.DataField
 			dc.setPenWidth(14);
 
 			dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
-			dc.drawArc(x0, y0,  r -7, Toybox.Graphics.ARC_CLOCKWISE, 70, 30);
+			dc.drawArc(_xOffset+x0, _yOffset+y0,  r -7, Toybox.Graphics.ARC_CLOCKWISE, 70, 30);
 
 			dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-			dc.drawArc(x0, y0, r -7, Toybox.Graphics.ARC_CLOCKWISE, 150, 110);
+			dc.drawArc(_xOffset+x0, _yOffset+y0, r -7, Toybox.Graphics.ARC_CLOCKWISE, 150, 110);
 			
 			//Drawing the degree indicators every 30°
 			dc.setColor(_color, Graphics.COLOR_TRANSPARENT);
 			dc.setPenWidth(2);
 			for(i = 0; i <= 10; i++ ) { 
-				dc.drawLine(x0 + f_cos[i] * (r - 14),
-							y0 + f_sin[i] * (r - 14),
-							x0 + f_cos[i] * r,
-							y0 + f_sin[i] * r); 
+				dc.drawLine(_xOffset+x0 + f_cos[i] * (r - 14),
+							_yOffset+y0 + f_sin[i] * (r - 14),
+							_xOffset+x0 + f_cos[i] * r,
+							_yOffset+y0 + f_sin[i] * r); 
 			}
 
 			/////////////////////////////////////////////////////////////////////
 			//Writing the Data 
 			
 			//Wind speed
-			dc.drawText(x0, _viewHeight * 0.33 - _lineHeight_large / 2, _font_large, WS.format("%d"), _cjust);
-			if (field[1] > 0) {dc.drawText(x0, _lineHeight + 3, _font, "AWS ", _cjust);  
-			} else {dc.drawText(x0, _lineHeight + 3, _font, "TWS ", _cjust);}
+			dc.drawText(_xOffset+x0, _yOffset+_viewHeight * 0.33 - _lineHeight_large / 2, _font_large, WS.format("%d"), _cjust);
+			if (field[1] > 0) {dc.drawText(_xOffset+x0, _yOffset+_lineHeight + 3, _font, "AWS ", _cjust);  
+			} else {dc.drawText(_xOffset+x0, _yOffset+_lineHeight + 3, _font, "TWS ", _cjust);}
 
 			//SOG in knots
-			dc.drawText((_viewWidth * 0.25)+20 , _viewHeight * 0.66 - _lineHeight_medium / 2 , _font_medium, (SOG * 1.9438).format("%0.1f"), _cjust);
-			dc.drawText((_viewWidth * 0.25)+20, _viewHeight * 0.5, _font, "SOG", _cjust);
+			dc.drawText(_xOffset+(_viewWidth * 0.25)+20 , _yOffset+_viewHeight * 0.66 - _lineHeight_medium / 2 , _font_medium, (SOG * 1.9438).format("%0.1f"), _cjust);
+			dc.drawText(_xOffset+(_viewWidth * 0.25)+20, _yOffset+_viewHeight * 0.5, _font, "SOG", _cjust);
 
 			//VMG in knots
-			dc.drawText((_viewWidth * 0.75)-20, _viewHeight * 0.66 - _lineHeight_medium / 2, _font_medium, (VMG * 1.9438).format("%0.1f"), _cjust);
-			dc.drawText((_viewWidth * 0.75)-20, _viewHeight * 0.5, _font, "VMG", _cjust);
+			dc.drawText(_xOffset+(_viewWidth * 0.75)-20, _yOffset+_viewHeight * 0.66 - _lineHeight_medium / 2, _font_medium, (VMG * 1.9438).format("%0.1f"), _cjust);
+			dc.drawText(_xOffset+(_viewWidth * 0.75)-20, _yOffset+_viewHeight * 0.5, _font, "VMG", _cjust);
 
 			/////////////////////////////////////////////////////////////////////
 			//Drawing the Wind Direction Indicator
 			dc.setPenWidth(9);
 			if (field[0] > 0) {
 				//AWA indicator
-				dc.drawLine(x0 + cos * (r - 35),
-							y0 + sin * (r - 35 ),
-							x0 + cos * r,
-							y0 + sin * r);
+				dc.drawLine(_xOffset+x0 + cos * (r - 35),
+							_yOffset+y0 + sin * (r - 35 ),
+							_xOffset+x0 + cos * r,
+							_yOffset+y0 + sin * r);
 				dc.drawText(x0, 3, _font, "AWD/", _cjust);
 			} else {
 				//TWA indicator
-				dc.drawLine(x0 + cos_t * (r - 35),
-							y0 + sin_t * (r - 35 ),
-							x0 + cos_t * r,
-							y0 + sin_t * r);
-				dc.drawText(x0, 3, _font, "TWD/", _cjust);
+				dc.drawLine(_xOffset+x0 + cos_t * (r - 35),
+							_yOffset+y0 + sin_t * (r - 35 ),
+							_xOffset+x0 + cos_t * r,
+							_yOffset+y0 + sin_t * r);
+				dc.drawText(_xOffset+x0, _yOffset+3, _font, "TWD/", _cjust);
 			}
 
 			
 			//Drawing the Tack Assist indicator
 			dc.setPenWidth(3);
-			dc.drawLine(x0 + cos_b * (r - 35),
-						y0 + sin_b * (r - 35),
-						x0 + cos_b * r,
-						y0 + sin_b * r);
+			dc.drawLine(_xOffset+x0 + cos_b * (r - 35),
+						_yOffset+y0 + sin_b * (r - 35),
+						_xOffset+x0 + cos_b * r,
+						_yOffset+y0 + sin_b * r);
 
 			
 			/////////////////////////////////////////////////////////////////////
 			//Drawing the roll slider (starting at 6 o'clock = 270°)
 			dc.setPenWidth(7);
 			
-			if (roll > 0) {dc.drawArc(x0, y0, r - 17, Toybox.Graphics.ARC_CLOCKWISE, 270, 270 - roll);} 
-			else {dc.drawArc(x0, y0, r - 17, Toybox.Graphics.ARC_CLOCKWISE, 270 - roll, 270);}
+			if (roll > 0) {dc.drawArc(_xOffset+x0, _yOffset+y0, r - 17, Toybox.Graphics.ARC_CLOCKWISE, 270, 270 - roll);} 
+			else {dc.drawArc(_xOffset+x0, _yOffset+y0, r - 17, Toybox.Graphics.ARC_CLOCKWISE, 270 - roll, 270);}
 
 			/////////////////////////////////////////////////////////////////////
 			//Drawing the Battery indicator
@@ -338,19 +347,19 @@ class UltrasonicView extends WatchUi.DataField
 				} else {
 					dc.setColor(Graphics.COLOR_TRANSPARENT, Graphics.COLOR_TRANSPARENT);
 				}
-				dc.fillRectangle(x0-delta_x/2 + i*delta_x/10, _viewHeight*0.8, 1+delta_x / 10, delta_y);
+				dc.fillRectangle(_xOffset+x0-delta_x/2 + i*delta_x/10, _yOffset+_viewHeight*0.8, 1+delta_x / 10, delta_y);
 			}
 			dc.setColor(_color, Graphics.COLOR_TRANSPARENT);
-			dc.drawRectangle(x0-delta_x/2, _viewHeight*0.8, 1+delta_x, delta_y);
-			dc.drawRectangle(x0+delta_x/2, _viewHeight*0.8 +3, 3, delta_y -6);
+			dc.drawRectangle(_xOffset+x0-delta_x/2, _yOffset+_viewHeight*0.8, 1+delta_x, delta_y);
+			dc.drawRectangle(_xOffset+x0+delta_x/2, _yOffset+_viewHeight*0.8 +3, 3, delta_y -6);
 			/////////////////////////////////////////////////////////////////////
 
 		} else {
 			// Print VMG
 			dc.setColor(_color, Graphics.COLOR_TRANSPARENT);
 
-			dc.drawText(x0, y0 - _lineHeight_medium / 2 + _lineHeight/2, _font_medium, VMG.format("%0.1f"), _cjust);
-			dc.drawText(x0, 3, _font, "VMG", _cjust);
+			dc.drawText(_xOffset+x0, _yOffset+y0 - _lineHeight_medium / 2 + _lineHeight/2, _font_medium, VMG.format("%0.1f"), _cjust);
+			dc.drawText(_xOffset+x0, _yOffset+3, _font, "VMG", _cjust);
 		}
 		return;
 	}	
