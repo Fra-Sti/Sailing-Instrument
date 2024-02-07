@@ -113,15 +113,18 @@ class UltrasonicView extends WatchUi.DataField
         _viewHeight = dc.getHeight();
         _viewWidth = dc.getWidth();
 
+		////////////////////////////////////////////////////////////
+		//Make the variables square if the datafield is not
 		if (_viewHeight>_viewWidth) {_viewHeight=_viewWidth;}
 		else {_viewWidth=_viewHeight;}
 
+		// Calculate offset to center the wind rose
 		_xOffset = (dc.getWidth() - _viewWidth) / 2;
 		_yOffset = (dc.getHeight() - _viewHeight) / 2;
 
+		// determine the center
 		x0 = _viewWidth / 2;
         y0 = _viewHeight / 2;
-
     }
 
 
@@ -139,19 +142,23 @@ class UltrasonicView extends WatchUi.DataField
 		//var pitch = null;
 		//var compass = null ;
 
-		///////////////////////
-		// Data receipt      //
-		///////////////////////
+		//////////////////////////
+		// Clear background     //
+		//////////////////////////
 
 		if (self.getBackgroundColor() == Graphics.COLOR_BLACK) {
 			_color = Graphics.COLOR_WHITE;
-			dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+			dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
 		} else {
 			_color = Graphics.COLOR_BLACK;
-			dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+			dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 		}
-
 		dc.clear();
+
+		
+		///////////////////////
+		// Data receipt      //
+		///////////////////////
 
 		// BLE status
 		var isScanning = _model.isScanning();
@@ -159,8 +166,8 @@ class UltrasonicView extends WatchUi.DataField
 
 		/////////////////////////////////////////////////////////
 		// Activate for debugging                              //
-		// scanResults = [582, 0, 48, 0, 10, 131, 136, 0, 0, 0];//
-		// SOG = 3;                                            //
+		 scanResults = [582, 0, 48, 0, 10, 131, 80, 0, 0, 0];//
+		 SOG = 3;                                            //
 		/////////////////////////////////////////////////////////
 	
 		// While not connected to watch display this START SCREEN
@@ -196,6 +203,8 @@ class UltrasonicView extends WatchUi.DataField
 			//pitch = scanResults[7] - 90;
 			//compass  = 360 - (scanResults[9] << 8 | scanResults[8]);
 		} 
+
+		if (roll == -90) {roll=0;}
 
 		///////////////////////
 		// Calculations      //
@@ -265,8 +274,11 @@ class UltrasonicView extends WatchUi.DataField
 							
 			/////////////////////////////////////////////////////////////////////
 			//Draw marine instrument
+			dc.setPenWidth(2);
+			dc.setColor(_color, Graphics.COLOR_TRANSPARENT);
+			dc.drawArc(_xOffset+x0, _yOffset+y0, x0+2, Toybox.Graphics.ARC_CLOCKWISE, 0, 360);
+			
 			dc.setPenWidth(14);
-
 			dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
 			dc.drawArc(_xOffset+x0, _yOffset+y0,  r -7, Toybox.Graphics.ARC_CLOCKWISE, 70, 30);
 
@@ -332,7 +344,7 @@ class UltrasonicView extends WatchUi.DataField
 			dc.setPenWidth(7);
 			
 			if (roll > 0) {dc.drawArc(_xOffset+x0, _yOffset+y0, r - 17, Toybox.Graphics.ARC_CLOCKWISE, 270, 270 - roll);} 
-			else {dc.drawArc(_xOffset+x0, _yOffset+y0, r - 17, Toybox.Graphics.ARC_CLOCKWISE, 270 - roll, 270);}
+			if (roll < 0) {dc.drawArc(_xOffset+x0, _yOffset+y0, r - 17, Toybox.Graphics.ARC_CLOCKWISE, 270 - roll, 270);}
 
 			/////////////////////////////////////////////////////////////////////
 			//Drawing the Battery indicator
